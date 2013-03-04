@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @book.id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @book.description %>
+</p>
+
+<p>
+	<%= link_to 'Execute This Runbook', new_book_run_path(@book) %> 
+</p>
+
+<p><b>Steps:</b></p>
+
+<table border=1 cellspacing=0 cellpadding=5>
+<tr>
+	<td>Step</td>
+	<td>Title</td>
+</tr>	
+<tr>
+<% @book.book_steps.each_with_index do |book_step,index| %>
+	<tr>
+		<td><%= index %></td>
+		<td><%= book_step.title %></td>
+	</tr>
+<% end %>
+</table>
+
+
+<p><b>Runs:</b></p>
+
+<table border=1 cellspacing=0 cellpadding=5>
+<tr>
+	<td>Step</td>
+	<td>Title</td>
+</tr>	
+<tr>
+<% @book.runs.each_with_index do |run,index| %>
+	<tr>
+		<td><%= index %></td>
+		<td><%= run.created_at %></td>
+	</tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

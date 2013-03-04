@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Run</h3>
+
+<p>
+  <b>Id:</b>
+  <%= @run.id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @run.user_id %>
+</p>
+
+<p>
+  <b>Book:</b>
+  <%= @run.book_id %>
+</p>
+
+<p>
+  <b>Complete:</b>
+  <%= @run.complete %>
+</p>
+
+<% @run.run_steps.each do |run_step| %>
+	  <%= run_step.book_step.title %><Br>
+<% end %>
+
+<p>
+<%= link_to 'Edit', edit_run_path(@run) %> |
+<%= link_to 'Back', runs_path %>
+</p>

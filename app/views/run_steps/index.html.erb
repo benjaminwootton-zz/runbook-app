@@ -1,0 +1,27 @@
+<h3>All Run Steps</h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Run</th>
+    <th>Book step</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @run_steps.each do |run_step| %>
+  <tr>
+    <td><%= run_step.id %></td>
+    <td><%= run_step.run_id %></td>
+    <td><%= run_step.book_step_id %></td>
+    <td><%= link_to 'Show', run_step %></td>
+    <td><%= link_to 'Edit', edit_run_step_path(run_step) %></td>
+    <td><%= link_to 'Destroy', run_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Run step', new_run_step_path %>

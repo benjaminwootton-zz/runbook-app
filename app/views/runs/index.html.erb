@@ -1,0 +1,29 @@
+<h3>All Runs</h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>User</th>
+    <th>Book</th>
+    <th>Complete</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @runs.each do |run| %>
+  <tr>
+    <td><%= run.id %></td>
+    <td><%= run.user_id %></td>
+    <td><%= run.book_id %></td>
+    <td><%= run.complete %></td>
+    <td><%= link_to 'Show', run %></td>
+    <td><%= link_to 'Edit', edit_run_path(run) %></td>
+    <td><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Run', new_run_path %>
