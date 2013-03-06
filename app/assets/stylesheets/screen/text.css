@@ -1,0 +1,75 @@
+h1,h2,h3,
+h4,h5,h6		{ color: #111; margin-bottom: .75em; }
+
+h1 				{ font-size: 30px; line-height: 1em; }
+h2 				{ font-size: 24px; font-weight: normal; color: #222; margin-bottom: 1em }
+h3 				{ font-size: 16px; color: #333; line-height: 1; margin-bottom: .75em }
+h4 				{ font-size: 14px; color: #666; line-height: 1.25; margin-bottom: 1.25em }
+h5 				{ font-size: 12px; font-weight: bold; margin-bottom: 1.5em }
+h6 				{ font-size: 11px; font-weight: bold }
+
+p           	{ margin: 0 0 1.5em }
+p.last      	{ margin-bottom: 0 }
+img         	{ border: none; }
+
+ul, ol			{ margin-left: 28px; margin-bottom: 1.5em; }
+li ul,
+li ol			{ margin-top: 1em; }
+ul li			{ list-style-type: disc; }
+li				{ margin-bottom: .5em; }
+
+dl          	{ margin: 0 0 1.5em 0 }
+dl dt       	{ font-weight: bold }
+dd          	{ margin-left: 1.5em }
+
+abbr, 
+acronym     	{ border-bottom: 1px dotted #666 }
+address     	{ margin-top: 1.5em; font-style: italic }
+del         	{ color:#666 }
+sup				{ font-size: 9px; vertical-align:top; }
+
+a				{ color: #358; text-decoration: underline }
+a:visited		{ color: #667 }
+a:focus, 
+a:hover     	{ color: #933 }
+
+blockquote  	{ margin: 1.5em; color: #666; font-style: italic }
+strong      	{ font-weight: bold }
+em,dfn      	{ font-style: italic; background: #ffc }
+dfn         	{ font-weight: bold }
+pre,code    	{ margin: 1.5em 0; white-space: pre }
+pre,code,tt 	{ font: 12px 'andale mono', 'monotype.com', 'lucida console', monospace; line-height: 1.5 } 
+tt         		{ display: block; margin: 1.5em 0; line-height: 1.5 }
+
+
+hr { border: none; border: 1px dotted #CCC; margin-bottom: 2em; margin-top: 1em; }
+
+table { width: 100%; border: 0; margin-bottom: 2em;  }
+
+	 table thead th
+	 {
+	 	font-size: 13px;
+		font-weight: bold;
+		text-align: left;
+		padding: 10px;
+		
+		background-color: #263849 !important;
+		
+		color: #FFF;
+		
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}		
+	
+	table td { vertical-align: top; }
+	
+	table tbody tr td { background: #FFF; border-bottom: 1px dotted #DDD; }
+
+	table th { padding: 10px 0; }
+	table tbody td { padding: 10px; }
+	
+	table tr.even td { background: #F9F9F9; }
+	
+	tr:nth-child(odd) { background-color:#F9F9F9; }
+	tr:nth-child(even) { background-color:#FFF; }
+

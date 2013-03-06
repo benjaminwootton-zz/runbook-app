@@ -2,13 +2,105 @@
 <html>
 <head>
   <title>Runbook</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+
+<%= stylesheet_link_tag "screen" %>
+	<!-- <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+	<link rel="stylesheet" href="/css/plugin.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+	<link rel="stylesheet" href="/css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="/css/login.css" type="text/css" media="screen" title="no title" charset="utf-8" /> -->
+	<%= stylesheet_link_tag "plugin" %>
+	<%= stylesheet_link_tag "custom" %>
+
+		<%= javascript_include_tag "application" %>
+
+
+	<%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+	
+	<div id="header">
+		<h1><a href="index2.html">RunBook</a></h1>
+		
+		<div id="info">
 
+		</div> <!-- #info -->
+				
+	</div> <!-- #header -->	
+	
+	
+		
+		<div id="nav">	
+
+			<ul class="mega-container mega-grey">
+	
+				<li class="mega">
+					<a href="index2.html" class="mega-link">Dashboard</a>	
+				</li>
+		
+				<li class="mega mega-current">				
+					<a href="javascript:;" class="mega-tab">
+						Sample Pages
+					</a>
+					
+					<div class="mega-content mega-menu ">
+						<ul>
+							<li><a href="sample_gallery.html">Image Gallery</a></li>
+							<li><a href="sample_reports.html">Reports</a></li>			
+							<li><a href="sample_faq.html">FAQ</a></li>				
+							<li><a href="sample_invoice.html">Invoice</a></li>	
+							<li><a href="sample_calendar.html">Calendar</a></li>		
+							<li><a href="sample_people.html">People Listing</a></li>	
+							<li><a href="sample_details.html">Support Request</a></li>	
+						</ul>
+					</div>						
+				</li>
+		
+				<li class="mega ">				
+					<a href="javascript:;" class="mega-tab hasSub">Page Elements</a>	
+					
+					<div class="mega-content mega-menu ">						
+								
+						<ul>
+							<li><a href="text.html">Buttons &amp; Text</a></li>	
+							<li><a href="grid.html">Grid Layout</a></li>	
+							<li><a href="tables.html">Tables</a></li>	
+							<li><a href="forms.html">Forms</a></li>	
+							<li><a href="charts.html">Charts</a></li>						
+						</ul>
+					</div>				
+				</li>
+				
+				<li class="mega">				
+					<a href="widgets.html" class="mega-link">Widgets</a>			
+				</li>							
+			
+			</ul>
+		</div> <!-- #nav -->
+	
+	
+	
+	
+		<div id="content" class="xfluid">
+		
+		<a name="line"></a>
+		<div class="portlet x12">
+			
+			<div class="portlet-header">
+				<h4><%= yield(:title) %></h4>
+			</div> <!-- .portlet-header -->
+			
+
+
+
+
+ 
+	<div class="portlet-content">
 <%= yield %>
+
+ </div></div></div>
+
+</div>
 
 </body>
 </html>

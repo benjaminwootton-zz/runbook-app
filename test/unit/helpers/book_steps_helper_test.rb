@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class BookStepsHelperTest < ActionView::TestCase
+class StepsHelperTest < ActionView::TestCase
 end

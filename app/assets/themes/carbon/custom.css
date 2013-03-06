@@ -1,0 +1,18 @@
+#header { background: #111 url(header_bg.png) repeat-x 0 0; }
+	
+#nav { background: #222; }
+
+.portlet-header h4 { color: #222; }
+.portlet-tab-nav .portlet-tab-nav-active { background-color: #222 !important; }
+
+/* Black Menu */
+.mega-container .mega-tab { background-color: transparent; color: #fff !important; background-position: right top; border: 1px solid transparent; }
+
+.mega-container .mega:hover .mega-tab,
+.mega-container .mega:hover .mega-link,
+.mega-container .mega-current .mega-tab,
+.mega-container .mega-current .mega-link  { background-color: #111; color: #fff !important; border-color: #111; }
+
+.mega-container .mega:hover .mega-content { border-color: #111; }
+.mega-container .mega-menu { background-color: #111 !important; }
+.mega-container li > ul { background-color: #111 !important; }

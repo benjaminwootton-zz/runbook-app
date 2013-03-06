@@ -33,14 +33,7 @@ class RunsController < ApplicationController
       format.json { render json: @run }
     end
   end
-
-  def build_run_steps(run)
-    run.book.book_steps.each do |book_step|
-      runstep = RunStep.new( { :run_id => run.id, :book_step_id => book_step.id })
-      runstep.save
-    end    
-  end
-
+ 
   # GET /runs/1/edit
   def edit
     @run = Run.find(params[:id])
@@ -53,9 +46,7 @@ class RunsController < ApplicationController
 
     respond_to do |format|
       if @run.save
-        build_run_steps(@run)
-        @run.reload
-        format.html { redirect_to run_run_step_path(@run,@run.run_steps.first), notice: 'Run was successfully created.' }                
+        format.html { redirect_to @run.book.steps.first, notice: 'Run was successfully created.' }                
       else
         format.html { render action: "new" }        
       end
@@ -89,4 +80,21 @@ class RunsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def finish
+      @run = Run.find(params[:id])
+      @run.complete = true
+      @run.save
+  end
+
+  def sendmail
+      puts 'Sending Mail!'
+      @run = Run.find(params[:id])
+      respond_to do |format|
+        format.html { render action: "finish" }
+      end
+
+  end
+
+
 end

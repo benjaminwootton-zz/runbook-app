@@ -1,5 +1,9 @@
-<h1>New run</h1>
+<%= content_for :title, 'ACME Ltd Run Books > ' + @run.book.title + ' > Begin New Run'  %>
+
+<p><b>Book: <%= @run.book.title %></b></p>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', runs_path %>
+</br>
+
+<%= link_to 'Back', @run.book %>

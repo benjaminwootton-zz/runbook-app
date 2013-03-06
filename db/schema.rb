@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130303102152) do
-
-  create_table "book_steps", :force => true do |t|
-    t.integer  "book_id"
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130305170349) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -28,17 +20,24 @@ ActiveRecord::Schema.define(:version => 20130303102152) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "run_steps", :force => true do |t|
-    t.integer  "run_id"
-    t.integer  "book_step_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
   create_table "runs", :force => true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
     t.boolean  "complete"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "steps", :force => true do |t|
+    t.integer  "book_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -6,12 +6,12 @@ describe "run_steps/index" do
       stub_model(RunStep,
         :id => 1,
         :run_id => 2,
-        :book_step_id => 3
+        :step_id => 3
       ),
       stub_model(RunStep,
         :id => 1,
         :run_id => 2,
-        :book_step_id => 3
+        :step_id => 3
       )
     ])
   end

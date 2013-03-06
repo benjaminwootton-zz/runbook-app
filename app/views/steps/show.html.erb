@@ -1,0 +1,18 @@
+<%= content_for :title, 'ACME Ltd Run Books > ' + @step.book.title + ' > ' + @step.title %>
+
+
+<% if !@runs.nil? %>
+	<p><b>This RunBook is currently being ran <%= @runs.size %> times</b><br>
+<% end %>
+
+<p><i><%= @step.description %></i></p>
+
+<% unless @step.previous.nil? %>
+	<%= link_to 'Previous', @step.previous  %> | 
+<% end %>
+
+<% if !@step.next.nil? %>
+	<%= link_to 'Next', @step.next   %>
+<% else %>
+	<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
+<% end %>

@@ -1,27 +1,38 @@
-<h1>Listing books</h1>
+<%= content_for :title, 'ACME Ltd Run Books' %>
 
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @books.each do |book| %>
-  <tr>
-    <td><%= book.id %></td>
-    <td><%= book.title %></td>
-    <td><%= book.description %></td>
-    <td><%= link_to 'Show', book %></td>
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="department">
+				
+	<h2>Some Run Book Category</h2>
+	
+	<% @books.each do |book| %>
+
+		<div class="user-card">
+					
+			<div class="avatar">
+				<%= image_tag 'avatar.jpg' %>
+
+			</div> <!-- .user-card-avatar -->
+			
+			<div class="details">
+				<p><strong><%=  book.title %></strong><br />
+					(702) 555-5555<br />
+					<%= link_to book.title, book %></p>
+			</div> <!-- .user-card-content -->
+		
+		</div> <!-- .user-card -->
+
+
+	  
+	<% end %>
+
+</div>
+
+<div style="clear:both"/>
+
+<p><%= link_to 'New Book', new_book_path %></p>
+
 
 <br />
 
-<%= link_to 'New Book', new_book_path %>
+

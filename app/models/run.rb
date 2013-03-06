@@ -3,11 +3,11 @@ class Run < ActiveRecord::Base
 
   belongs_to :book
   
-  has_many :run_steps
+  belongs_to :user
 
   def in_role?(role)
   	true
   end
 
-
 end
+ 

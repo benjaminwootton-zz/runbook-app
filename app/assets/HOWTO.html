@@ -1,0 +1,800 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Slate Admin Documentation</title>
+	<link rel="stylesheet" href="./css/screen/reset.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="./docs/docs.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+	<link rel="stylesheet" href="./css/screen/xGrid.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="./css/screen/buttons.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+</head>
+
+<body id="top">
+
+<div id="wrapper" class="xgrid">
+	
+	<div id="header">
+		
+		<div id="title" class="x10">
+			<h1>
+				<a href="#top">Slate Admin</a>
+				<a id="version" href="javascript:;">1.0</a>
+			</h1>
+		</div>
+		
+		<div id="demo" class="x2">
+			
+			<a href="index.html" class="btn btn-small btn-orange">View Demo</a>
+			
+		</div> 
+		
+		
+	</div>
+	
+	
+	<div id="nav">
+		<ul id="toc">
+			<li><a href="#support">Support</a></li>
+			<!-- <li><a href="#layouts">Layouts</a></li> -->
+			<li><a href="#menu">Menu</a></li>
+			<li><a href="#portlets">Porlets</a></li>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#grid">Grid Layout</a></li>
+			<li><a href="#forms">Forms</a></li>
+			<li><a href="#charts">Visualize Charts</a></li>
+			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#tooltips">Tooltips</a></li>
+			<li><a href="#widgets">Widgets</a></li>
+			<li><a href="#sample_pages">Sample Pages</a></li>
+			<li><a href="#customize">Customize</a></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	
+	<div id="start" class="p2 x9 a1">
+		
+		<h2 id="support">Support</h2>
+
+		
+		<p>Thank you for purchasing Slate Admin. If you have any questions that have not been answered below, feel free to contact me via my Theme Forest account. Thanks again!</p>
+
+	<p><a href="http://themeforest.net/user/MadeByAmp" class="support_link">http://themeforest.net/user/MadeByAmp</a></p>	
+	
+	
+	</div>	
+	
+
+
+
+
+
+
+
+
+	<!-- 
+	<div class="p2 x9 a1">
+		
+		<h2 id="layouts">Layouts</h2>
+
+		<h3>Default Layout</h3>
+		<p>You do not have to make any modifications to use the default layout.</p>
+		
+		<img src="docs/screenshots/02_dashboard.jpg" class="screen_grab" />
+		
+		<h3>Sidebar Layout</h3>
+		<p>To use the sidebar layout, add the stylesheet layout-sidebar.css in your head tag.</p>
+		
+		
+		<pre><code>&lt;link rel="stylesheet" href="./css/layout-sidebar.css" type="text/css" media="screen" title="no title" charset="utf-8" /&gt;</code></pre>
+
+
+		<img src="docs/screenshots/03_sidebar.jpg" class="screen_grab" />
+		
+		<h3>Fixed Layout</h3>
+		<p>To use the sidebar layout, add the stylesheet layout-fixed.css in your head tag.</p>
+		
+		<pre><code>&lt;link rel="stylesheet" href="./css/layout-fixed.css" type="text/css" media="screen" title="no title" charset="utf-8" /&gt;</code></pre>
+
+		<img src="docs/screenshots/04_fixed.jpg" class="screen_grab" />
+	</div>
+-->
+	
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="menu">Menu</h2>
+
+
+		<img src="docs/screenshots/menu.jpg" class="mini_grab" />
+		
+		<h3>Regular Tab</h3>
+		<p>The code below is used to create a regular tab in the menu.</p>
+<pre><code>
+&lt;li class="mega"&gt;
+	&lt;a href="index2.html" class="mega-link"&gt;Dashboard&lt;/a&gt;	
+&lt;/li&gt;</code></pre>
+
+	<h3>Dropdown Tab</h3>
+		<p>The code below is used to create a dropdown tab in the menu.</p>
+<pre><code>
+&lt;li class="mega"&gt;				
+	&lt;a href="javascript:;" class="mega-tab"&gt;
+		Layouts
+	&lt;/a&gt;
+	
+	&lt;div class="mega-content mega-menu "&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="index2.html"&gt;Layout #1 (Default)&lt;/a&gt;&lt;/li&gt;	
+			&lt;li&gt;&lt;a href="layout-sidebar.html"&gt;Layout #2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="layout-fixed.html"&gt;Layout #3&lt;/a&gt;&lt;/li&gt;	
+		&lt;/ul&gt;
+	&lt;/div&gt;						
+&lt;/li&gt;</code></pre>
+		
+
+
+
+<h3>Multi-level Menu</h3>
+
+		<img src="docs/screenshots/multi.jpg" class="mini_grab" />
+	
+		<p>The code below is used to create a multi-level menu. To create sub-levels, simply nest unordered lists.</p>
+<pre><code>
+&lt;li class="mega"&gt;
+	&lt;a href="javascript:;" class="mega-tab hasSub"&gt;Multi-level menu&lt;/a&gt;
+	&lt;div class="mega-content mega-menu "&gt;	
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="javascript:;"&gt;Demonstration&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="javascript:;"&gt;Purposes&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href="javascript:;" class="hasSub"&gt;Only&lt;/a&gt;
+				
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="javascript:;"&gt;Fake Item #1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="javascript:;"&gt;Fake Item #2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="javascript:;"&gt;Fake Item #3&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;		
+		&lt;/ul&gt;
+	&lt;/div&gt;						
+&lt;/li&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+	
+
+	<div class="p2 x9 a1">
+		
+		<h2 id="portlets">Portlets</h2>
+		
+		
+		<img src="docs/screenshots/portlet.jpg" class="mini_grab" />
+
+		<h3>Basic</h3>
+		
+		<p>Example to setup a basic portlet.</p>
+		
+		<pre><code>
+&lt;div class="portlet"&gt;	
+			
+	&lt;div class="portlet-header"&gt;
+	
+		&lt;h4&gt;Portlet Title&lt;/h4&gt;
+
+	&lt;/div&gt; &lt;!-- .portlet-header --&gt;	
+	
+	&lt;div class="portlet-content"&gt;		
+		
+		-- PORTLET CONTENT GOES HERE --
+		
+	&lt;/div&gt; &lt;!-- .portlet-content --&gt;
+		
+&lt;/div&gt; &lt;!-- .portlet --&gt;</code></pre>
+		
+
+
+		<h3>Tabs</h3>
+		
+		<p>Portlet with tabbed content.</p>
+			
+		<pre><code>
+&lt;div class="portlet"&gt;	
+
+	&lt;div class="portlet-header"&gt;
+	
+		&lt;h4&gt;Tabs&lt;/h4&gt;
+		
+		&lt;ul class="portlet-tab-nav"&gt;
+		
+			&lt;li&gt;&lt;a href="#tab1"&gt;TAB 2 TITLE&lt;/a&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="#tab2"&gt;TAB 2 TITLE&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+	&lt;/div&gt; &lt;!-- .portlet-header --&gt;	
+	
+	&lt;div class="portlet-content"&gt;	
+			
+		&lt;div id="tab1" class="portlet-tab-content"&gt;
+		
+			-- TAB CONTENT GOES HERE --
+
+		&lt;/div&gt; &lt;!-- .portlet-tab-content --&gt;
+		
+		&lt;div id="tab2" class="portlet-tab-content"&gt;
+					
+			-- TAB CONTENT GOES HERE --
+
+		&lt;/div&gt; &lt;!-- .portlet-tab-content --&gt;
+		
+	&lt;/div&gt; &lt;!-- .portlet-content --&gt;	
+	
+&lt;/div&gt; &lt;!-- .portlet --&gt;</code></pre>
+		
+	</div>
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="tables">Tables</h2>
+		
+		<img src="docs/screenshots/14_tables.jpg"  class="screen_grab" />
+
+		<h3>Basic Table</h3>
+		
+		
+		<pre><code>
+&lt;table border="0" cellpadding="0" cellspacing="0"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Rendering engine&lt;/th&gt;
+			&lt;th&gt;Browser&lt;/th&gt;
+			&lt;th&gt;Platform(s)&lt;/th&gt;
+			&lt;th&gt;Engine version&lt;/th&gt;
+			&lt;th&gt;CSS grade&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Trident&lt;/td&gt;
+			&lt;td&gt;Internet Explorer 5.5&lt;/td&gt;
+			&lt;td&gt;Win 95+&lt;/td&gt;
+			&lt;td class="center"&gt;5.5&lt;/td&gt;
+			&lt;td class="center"&gt;A&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Trident&lt;/td&gt;
+			&lt;td&gt;Internet Explorer 6&lt;/td&gt;
+			&lt;td&gt;Win 98+&lt;/td&gt;
+			&lt;td class="center"&gt;6&lt;/td&gt;
+			&lt;td class="center"&gt;A&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+	</code></pre>
+	
+		<h3>Advanced Tables</h3>
+		
+		<p>To create an advanced table using the <a href="http://www.datatables.net/">Data Table Plugin</a> add the following attribute to any table</p>
+		
+		<pre><code>&lt;table rel="datatable"&gt;</code</pre>
+			
+		<p><strong>-- OR -- </strong></p>
+		
+		<p>In your javascript grab the table element you wish to use and attach the data table plugin like below:</p>
+		
+		<pre><code>$('#myDataTable').dataTable ();</code</pre>
+		
+	</div>
+	
+	
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="grid">Grid Layout</h2>
+		
+		<p> The layout is based on a 12 column grid. Any combination of columns can be used in a row so long as the sum of the columns is not greater than 12. Columns are created by adding one of the classes .x1-.x12 to a div.portlet. </p>
+		
+		<img src="docs/screenshots/13_grid.jpg" class="screen_grab" />
+				
+		<p> <strong>Here are a few examples of a correct column layout. </strong></p>					
+
+<pre>
+&lt;div class="portlet x12"&gt;col&lt;/div&gt;
+			
+&lt;div class="portlet x6"&gt;col&lt;/div&gt;
+&lt;div class="portlet x6"&gt;col&lt;/div&gt;
+
+&lt;div class="portlet x8"&gt;col&lt;/div&gt;
+&lt;div class="portlet x4"&gt;col&lt;/div&gt;
+
+&lt;div class="portlet x4"&gt;col&lt;/div&gt;
+
+&lt;div class="portlet x4"&gt;col&lt;/div&gt;
+&lt;div class="portlet x4"&gt;col&lt;/div&gt;
+</pre>
+
+		<p> <strong>Here is an example of an incorrect column layout. As you'll see, the columns add up to 14 instead of 12.</strong></p>					
+<pre>
+&lt;div class="portlet x8"&gt;col&lt;/div&gt;
+&lt;div class="portlet x6"&gt;col&lt;/div&gt;
+</pre>
+
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="forms">Forms</h2>
+		
+		
+		<img src="docs/screenshots/15_form.jpg" class="screen_grab" />
+		
+<pre><code>
+&lt;form class="form" action="" method="get" accept-charset="utf-8"&gt;
+</code></pre>
+		
+		<p>All styled forms need to have the class .form</p>
+		
+		<p>To create a form with the labels on top of the fields, add the class .label-top to the form tag. The default for forms is labels to the left of fields and no classes are necessary for this to work.</p>
+
+				
+<pre><code>
+&lt;div class="field"&gt;
+	&lt;label for="subject"&gt;Subject&lt;/label&gt;
+	&lt;input type="text" name="subject" value="" id="subject" class="medium" /&gt;				
+	&lt;span class="field_help"&gt;This is the help text for the field&lt;/span&gt;
+	&lt;span class="field_error"&gt;This field is invalid&lt;/span&gt;
+&lt;/div&gt; &lt;!-- .field --&gt;
+</code></pre>
+		
+		
+
+		<p>Specify the label position using the class .label-top to create labels that are on top of the fields. Use the class .label-inline to create labels that are to the left of the fields. These two classes go on the main form tag.</p>
+
+		<p>Input elements can contain the classes .small, .medium, .large to specify the size of the an input field.</p>
+		
+		<p>Specify field help text by adding SPAN.help_text</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="charts">Charts</h2>
+		
+		
+		<img src="docs/screenshots/16_chart.jpg" class="screen_grab" />
+		
+		<p>Sample charting data table below</p>
+<pre><code>
+&lt;table class="stats" rel="line" width="100%" cellpadding="0" cellspacing="0"&gt;
+	
+	&lt;caption&gt;2009/2010 Sales by industry (Million)&lt;/caption&gt;
+
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&nbsp;&lt;/td&gt;
+			&lt;th&gt;Banking&lt;/th&gt;
+			&lt;th&gt;Beauty&lt;/th&gt;
+			&lt;th&gt;Insurance&lt;/th&gt;
+			&lt;th&gt;Internet&lt;/th&gt;
+			&lt;th&gt;Media&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;2009&lt;/th&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;14&lt;/td&gt;
+			&lt;td&gt;2&lt;/td&gt;
+		&lt;/tr&gt;
+		
+		&lt;tr&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;11&lt;/td&gt;
+			&lt;td&gt;7&lt;/td&gt;
+		&lt;/tr&gt;		
+	&lt;/tbody&gt;
+	
+&lt;/table&gt;
+
+</code></pre>
+		
+		<h3>Charting Helper</h3>
+		<p>The quickest and easiest way to create a chart is to add the class .stats and a rel attribute with chart type (line, area, bar, pie).</p>
+		
+		
+<pre><code>
+&lt;table class="stats" rel="line"&gt;
+</code></pre>
+
+<p><strong>-- OR --</strong></p>
+
+<p>Attached the jquery visualize plugin to the table you want in javascript.</p>
+
+<pre><code>
+$('#myChartTable').visualize({ type: 'line' });
+</code></pre>
+
+	</div>
+	
+	
+	
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="buttons">Buttons</h2>
+		
+		
+		<img src="docs/screenshots/12_text.jpg"  class="screen_grab" />
+		
+<pre><code>
+&lt;button class="<strong><em>btn-style   btn-color   btn-size   btn-icon</em></strong>"&gt;Button Text&lt;/button&gt;
+</code></pre>
+
+
+
+<h3>Colors</h3>	
+<ol>	
+	<li><strong>Blue</strong> - .btn-blue</li>
+
+	<li><strong>Orange</strong> - .btn-orange</li>
+	<li><strong>Red</strong> - .btn-red</li>
+	<li><strong>Green</strong> - .btn-green</li>
+	<li><strong>Black</strong> - .btn-black</li>
+
+	<li><strong>Purple</strong> - .btn-purple</li>
+	<li><strong>Navy</strong> - .btn-navy</li>
+	<li><strong>Maroon</strong> - .btn-maroon</li>
+	<li><strong>Grey</strong> - .btn-grey</li>
+
+	<li><strong>Yellow</strong> - .btn-yellow</li>
+	<li><strong>Teal</strong> - .btn-teal</li>
+	<li><strong>Pink</strong> - .btn-pink</li>
+</ol>
+
+<div class="clear"></div>
+<hr />
+
+<h3>Sizes</h3>
+<ol>	
+	<li><strong>Small</strong> - .btn-small</li>
+	<li><strong>Medium</strong> - no class needed</li>
+	<li><strong>Large</strong> - .btn-large</li>	
+
+</ol>
+
+
+<div class="clear"></div>
+<hr />
+
+
+<h3>Styles</h3>
+<ol>	
+	<li><strong>Default</strong> - .btn</li>
+	<li><strong>Icon</strong> - .btn-icon</li>
+	<li><strong>Mini</strong> - .btn-mini</li>	
+
+</ol>
+
+
+<div class="clear"></div>
+<hr />
+
+	
+<h3>Icons</h3>
+<ol>	
+	<li><strong>Comment</strong> - .btn-comment</li>
+	<li><strong>Heart</strong> - .btn-heart</li>
+	<li><strong>Star</strong> - .btn-star</li>	
+	<li><strong>Cart</strong> - .btn-cart</li>	
+	<li><strong>Print</strong> - .btn-print</li>		
+	<li><strong>RSS</strong> - .btn-rss</li>		
+	<li><strong>User</strong> - .btn-user</li>		
+	<li><strong>Check</strong> - .btn-check</li>		
+	<li><strong>Dollar</strong> - .btn-dollar</li>		
+	<li><strong>Refresh</strong> - .btn-refresh</li>		
+	<li><strong>Home</strong> - .btn-home</li>		
+	<li><strong>Plus</strong> - .btn-plus</li>		
+	<li><strong>Minus</strong> - .btn-minus</li>		
+	<li><strong>Cross</strong> - .btn-cross</li>		
+	<li><strong>Arrow Left</strong> - .btn-arrow-left</li>		
+	<li><strong>Arrow Right</strong> - .btn-arrow-right</li>		
+	<li><strong>Arrow Up</strong> - .btn-arrow-up</li>		
+	<li><strong>Arrow Down</strong> - .btn-arrow-down</li>		
+
+</ol>
+
+<div class="clear"></div>	
+<br />	
+<hr />
+
+
+
+		
+	</div>
+
+
+
+
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="tooltips">Tooltips</h2>
+		
+		
+		<img src="docs/screenshots/tooltip.jpg" class="mini_grab" />
+		
+		<p>You can add tooltips to almost every element in your document. To do so add a title attribute to your element and add a rel attribute with the value tooltip. Example below: </p>
+<pre><code>
+&lt;img src="" title="Tooltip for this image" rel="tooltip" alt="" /&gt;
+</code></pre>
+
+
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+	<div class="p2 x9 a1">
+		
+		<h2 id="widgets">Widgets</h2>
+		<h3>Tabs</h3>
+		
+		<img src="docs/screenshots/tabs.jpg" class="mini_grab" />
+	
+
+		<p>Below is the container for the tab widget. All panels must go in here.</p> 
+
+<pre><code>
+&lt;div class="tab_container"&gt; &lt;/div&gt;
+</code></pre>
+
+		<p>Below is the example code for tab navigation. The href attribute for each tab must be set to the id of the content that it shows. For example, if you have a div with the id of "tab4", then the tab attribute needs to be #tab4. </p>
+
+<pre><code>
+&lt;ul class="tabs"&gt; 
+    &lt;li&gt;&lt;a href="#tab1"&gt;Tab #1&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href="#tab2"&gt;Tab #2&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href="#tab3"&gt;Tab #3&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href="#tab4"&gt;Tab #4&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;
+</code></pre>
+
+
+
+ 
+
+		<p>Below is the example code for tab content. To change the content, simply modify everything inside of the .tab_content div. </p>
+<pre><code>
+&lt;div id="tab4" class="tab_content"&gt; 
+	&lt;img src="./images/coins_large.jpg" width="200" /&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;				            
+    
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;/div&gt; &lt;!-- #tab4 --&gt;
+</code></pre>
+
+
+		<h3>Accordion</h3>
+		
+		<img src="docs/screenshots/accordion.jpg" class="mini_grab" />
+<p>Below is the container for the accordion widget. All panels must go in here.</p>
+<pre><code>
+&lt;div class="accordion_container"&gt; &lt;/div&gt;
+</code></pre>		    
+
+
+		
+		<p>Below is the example code for an accordion panel and content. To change the content, simply modify everything inside of the .accordion_content div. </p>
+<pre><code>
+&lt;h2 class="accordion_panel"&gt;&lt;a href="#"&gt;Panel #2&lt;/a&gt;&lt;/h2&gt; 
+
+&lt;div class="accordion_content"&gt; 
+	&lt;img src="./images/rain_large.jpg" width="200" /&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+		
+	&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.&lt;/p&gt;			            
+&lt;/div&gt; &lt;!-- .accordion_content --&gt;
+</code></pre>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+	
+	
+	<div class="p2 x9 a1">
+		
+		<h2 id="sample_pages">Sample Pages</h2>
+		<h3>Image Gallery</h3>
+		
+		
+		<img src="docs/screenshots/05_gallery.jpg"  class="screen_grab" />
+		
+		<p>The following is an image gallery container. </p>
+<pre><code>
+&lt;ul class="gallery"&gt;
+
+&lt;/ul&gt;	
+</code></pre>
+<p>To create a gallery item, use the code below and insert it into the gallery container. </p>
+<pre><code>
+&lt;li&gt;
+	&lt;img alt="" src="./images/rain_small.jpg"/&gt;
+	
+	&lt;div class="actions"&gt;	
+		&lt;a  class="btn btn-orange btn-small" rel="facebox" href="./images/rain_large.jpg"&gt;View&lt;/a&gt;
+		&lt;a href="javascript:;" class="btn btn-grey btn-small"&gt;Delete&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+
+<br />
+
+		<h3>FAQ	</h3>
+		
+		
+		<img src="docs/screenshots/07_faq.jpg"  class="screen_grab" />
+		<p>The following is an Faq container. </p>
+		
+<pre><code>
+&lt;ul class="faq"&gt;	
+	
+&lt;/ul&gt;
+</code></pre>
+<p>To create a faq item, use the code below and insert it into the faq container. </p>
+<pre><code>
+&lt;li&gt;	
+	&lt;h3&gt; -- FAQ TITLE -- &lt;/h3&gt;
+	
+	&lt;div class="answer"&gt;
+		-- FAQ ANSWER --
+	&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+
+
+
+<br />
+
+		<h3>Calendar</h3>
+		
+		
+		<img src="docs/screenshots/09_calendar.jpg"  class="screen_grab" />
+		
+		<p>The calendar is contained in an HTML table.</p>
+		<p>To create a day in the table, use the following code:</p>
+<pre><code>
+&lt;td&gt;
+	&lt;div class="day_number"&gt;2&lt;/div&gt;
+	
+	-- EVENTS GO HERE --
+&lt;/td&gt;
+</code></pre>
+<p>To add an event to the calendar, use the following code and add it to the day you want. </p>
+<pre><code>
+&lt;div class="event"&gt;
+	&lt;span class="event_time"&gt;-- EVENT TIME --&lt;/span&gt;
+	&lt;a href="--EVENT URL--" class="event_title" title="--EVENT DESCRIPTION--" rel="tooltip"&gt; -- EVENT TITLE --&lt;/a&gt;			
+&lt;/div&gt;
+</code></pre>
+
+
+
+
+
+	</div>
+	
+
+	
+	<div class="p2 x9 a1">
+			
+			<h2 id="customize">Customize</h2>
+			
+			
+		<img src="docs/screenshots/custom-theme.png"  class="screen_grab" />
+			
+			<p>Slate Admin is very easy to customize. Basic customization is presented in the carbon folder in the themes directory.</p>
+			
+			<p>Simple add the Carbon css file after all other stylesheets.</p>
+			
+			<pre><code>
+&lt;link rel="stylesheet" href="./themes/carbon/custom.css" type="text/css" media="screen" title="no title" charset="utf-8" /&gt;	
+</code></pre>
+
+			<p>Then just look in the carbon theme stylesheet to modify colors.</p>
+
+		
+	</div>
+
+
+
+</div> <!-- #wrapper -->
+<script type="text/javascript" charset="utf-8" src="./js/jquery/jquery.1.4.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./docs/jquery.scrollTo.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	
+$(document).ready ( function () {
+	
+	$('#toc a').live ('click' , function () 
+	{ 		
+		$.scrollTo ( $(this).attr ('href') , 1000 );
+		//location.href = $(this).attr ('href');
+		return false;		
+	});
+	
+	var counter = 0;
+	
+	$('#toc a').each ( function () {
+		
+		counter++;
+		
+		$(this).text ( counter + '. ' + $(this).text () );
+		
+		var $h2 = $('body').find ('h2' + $(this).attr ('href') );
+		
+		$h2.text ( counter + '. ' + $h2.text () );
+	});
+	
+	$('#toc a:first').attr ('href' , '#top');
+});
+</script>
+</body></html>

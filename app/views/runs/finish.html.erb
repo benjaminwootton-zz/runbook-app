@@ -1,0 +1,13 @@
+<%= content_for :title, 'ACME Ltd Run Books > ' + @run.book.title + ' > Run Book Completed'  %>
+
+<p>
+  <b>Complete:</b>
+  <%= @run.complete %>
+</p>
+
+<%= link_to 'Send A Mail Of This Run', method: :post, :controller => 'runs', :id => @run.id, :action => 'sendmail'  %>
+
+<br/>
+<p>
+<%= link_to 'Done', @run.book %>
+</p>

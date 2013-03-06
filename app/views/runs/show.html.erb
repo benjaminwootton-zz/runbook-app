@@ -22,9 +22,8 @@
   <%= @run.complete %>
 </p>
 
-<% @run.run_steps.each do |run_step| %>
-	  <%= run_step.book_step.title %><Br>
-<% end %>
+<%= link_to 'Book', step_path(@run.book.steps.first) %>
+
 
 <p>
 <%= link_to 'Edit', edit_run_path(@run) %> |

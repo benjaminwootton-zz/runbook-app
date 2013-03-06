@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Forms Styles | Slate Admin</title>	
+		
+	<link rel="stylesheet" href="./css/screen.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+	<link rel="stylesheet" href="./css/plugin.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+	<link rel="stylesheet" href="./css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
+		
+</head>
+
+<body>
+	
+<div id="wrapper">
+	
+	<div id="header">
+		<h1><a href="index2.html">Slate Admin</a></h1>
+		
+		<div id="info">
+			<h4>Welcome James</h4>
+			
+			<p>
+				Logged in as Admin
+				<br />
+				You have <a href="javascript:;">5 messages</a>
+			</p>
+			
+			<img src="./images/avatar.jpg" alt="avatar" />
+		</div> <!-- #info -->
+				
+	</div> <!-- #header -->	
+	
+	
+		<div id="nav">	
+
+			<ul class="mega-container mega-grey">
+	
+				<li class="mega">
+					<a href="index2.html" class="mega-link">Dashboard</a>	
+				</li>
+		
+				<li class="mega">				
+					<a href="javascript:;" class="mega-tab">
+						Sample Pages
+					</a>
+					
+					<div class="mega-content mega-menu ">
+						<ul>
+							<li><a href="sample_gallery.html">Image Gallery</a></li>
+							<li><a href="sample_reports.html">Reports</a></li>			
+							<li><a href="sample_faq.html">FAQ</a></li>				
+							<li><a href="sample_invoice.html">Invoice</a></li>	
+							<li><a href="sample_calendar.html">Calendar</a></li>		
+							<li><a href="sample_people.html">People Listing</a></li>	
+							<li><a href="sample_details.html">Support Request</a></li>	
+						</ul>
+					</div>						
+				</li>
+		
+				<li class="mega mega-current">				
+					<a href="javascript:;" class="mega-tab hasSub">Page Elements</a>	
+					
+					<div class="mega-content mega-menu ">						
+								
+						<ul>
+							<li><a href="text.html">Buttons &amp; Text</a></li>	
+							<li><a href="grid.html">Grid Layout</a></li>	
+							<li><a href="tables.html">Tables</a></li>	
+							<li><a href="forms.html">Forms</a></li>	
+							<li><a href="charts.html">Charts</a></li>						
+						</ul>
+					</div>				
+				</li>
+				
+				<li class="mega">				
+					<a href="widgets.html" class="mega-link">Widgets</a>			
+				</li>							
+				
+				<li class="mega">
+					<a href="javascript:;" class="mega-tab hasSub">Multi-level menu</a>
+					<div class="mega-content mega-menu ">
+						
+								
+						<ul>
+							<li><a href="javascript:;">Demonstration</a></li>
+							<li><a href="javascript:;">Purposes</a></li>
+							<li>
+								<a href="javascript:;" class="hasSub">Only</a>
+								
+								<ul>
+									<li><a href="javascript:;">Fake Item #1</a></li>
+									<li><a href="javascript:;">Fake Item #2</a></li>
+									<li><a href="javascript:;">Fake Item #3</a></li>
+								</ul>
+							</li>
+						
+						</ul>
+					</div>						
+				</li>
+			</ul>
+		</div> <!-- #nav -->
+	
+	
+	<div id="content" class="xfluid">
+		
+		<div class="portlet x9">
+			<div class="portlet-header"><h4>Form Layout</h4></div>
+			
+			<div class="portlet-content">
+				
+											
+						<form action="#" method="post" class="form label-inline">
+	
+							<div class="field"><label for="fname">First Name </label> <input id="fname" name="fname" size="50" type="text" class="medium" /></div>
+				
+							<div class="field"><label for="lname">Last Name </label> <input id="lname" name="lname" size="50" type="text" class="medium" /></div>
+							
+							<div class="field"><label for="address1">Address 1 </label> <input id="address1" size="50" type="text" class="large" /></div>
+							<div class="field"><label for="address2">Address 2</label> <input id="address2" size="50" type="text" class="large" /></div>
+
+							<div class="field"><label for="country" class="">Country </label> <input id="country" name="country" size="12" type="text" class="medium" />
+				
+								<p class="field_help">Field help text.</p>
+							</div>
+							<div class="field phone_field"><label for="telephone">Telephone</label> <input id="telephone" size="3" type="text" class="xsmall" /> - <input size="3" type="text" class="xsmall" /> - <input size="4" type="text" class="xsmall" />
+
+								<p class="field_help">(###) - ### - ####</p>
+				
+							</div>
+							
+							<div class="field clearfix">								
+								<label for="lname">File Upload </label> 								
+								<input style="opacity: 0;" size="19" class="file" type="file" />								
+							</div>
+							
+							
+							
+							<div class="field">
+								<label for="type">Type </label>
+								<select id="type" class="medium">
+
+									<optgroup label="Type of Whatever">
+										<option selected="selected">Corporate</option>
+										<option>Individual</option>
+				
+									</optgroup>
+								</select>
+							</div>
+		
+				
+							<div class="controlset field">
+								<span class="label">Preferred Location</span>
+
+								
+								<div class="controlset-pad">
+								<input name="radio1" id="radio1" value="1" type="radio" /> <label for="radio1">Option 1</label><br />
+								<input name="radio1" id="radio2" value="1" type="radio" /> <label for="radio2">Option 2</label><br />
+				
+								<input name="radio1" id="radio3" value="1" type="radio" /> <label for="radio3">Option 3</label><br />
+								</div>
+							</div>			
+				
+							<div class="controlset field">
+
+								<span class="label">Something Else </span>
+								<div class="controlset-pad">
+									<input name="approved" id="check1" value="1" type="checkbox" />  <label for="check1">Some Option 1</label><br />
+				
+									<input name="pending" id="check2" value="1" type="checkbox" />  <label for="check2">Some Option 2</label><br />
+									<input name="actives" id="check3" value="1" type="checkbox" /> <label for="check3">Some Option 3</label><br />
+
+								</div>
+							</div>	
+							
+							
+							<div class="field"><label for="description">Description</label> <textarea rows="7" cols="50" name="description"></textarea></div>
+							
+							<br />
+							<div class="buttonrow">
+								<button class="btn">Primary Action</button>
+								<button class="btn btn-orange">Secondary Action</button>
+								<button class="btn btn-grey">Tertiary Action</button>
+							</div>
+
+						</form>
+
+<br /><br />
+<br /><br />
+				
+			</div>
+		</div>
+		
+		
+		<div class="portlet x3">
+			<div class="portlet-header"><h4>Sidebar</h4></div>
+			
+			<div class="portlet-content">
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+			</div>			
+		</div>
+		
+
+		
+
+		
+	</div>
+	
+	<div id="footer">
+		
+		<p>Copyright &copy; 2010 <a href="javascript:;">MadeByAmp</a>, all rights reserved.</p>
+		
+	</div> <!-- #footer -->
+	
+</div>
+
+<script  type="text/javascript" src="js/jquery/jquery.1.4.2.min.js"></script>
+<script  type="text/javascript" src="js/slate/slate.js"></script>
+<script  type="text/javascript" src="js/slate/slate.portlet.js"></script>
+<script  type="text/javascript" src="js/plugin.js"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () 
+{
+	slate.init ();
+	slate.portlet.init ();	
+});
+</script>
+	
+</body>
+
+</html>

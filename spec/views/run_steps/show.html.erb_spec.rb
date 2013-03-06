@@ -5,7 +5,7 @@ describe "run_steps/show" do
     @run_step = assign(:run_step, stub_model(RunStep,
       :id => 1,
       :run_id => 2,
-      :book_step_id => 3
+      :step_id => 3
     ))
   end
 

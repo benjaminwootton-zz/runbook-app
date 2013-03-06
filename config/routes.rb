@@ -1,17 +1,23 @@
 Runbook::Application.routes.draw do
   
-  resources :books do 
-    resources :book_steps     
-  end
+  match 'runs/:id/finish' => 'runs#finish'
 
+  resources :users
 
   resources :books do 
-    resources :runs          
+    resources :steps    
+    resources :runs   
   end
 
   resources :runs do 
-    resources :run_steps          
+    member do 
+      get 'finish'
+      get 'sendmail'
+   end
   end
+
+
+  resources :steps
 
 
   # The priority is based upon order of creation:

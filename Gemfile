@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 
@@ -24,6 +24,9 @@ gem 'jquery-rails'
 
 gem 'rspec'
 gem 'rspec-rails'
+
+gem 'shoulda'
+gem 'spork-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

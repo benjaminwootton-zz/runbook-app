@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class BookStepsControllerTest < ActionController::TestCase
+class StepsControllerTest < ActionController::TestCase
   setup do
-    @book_step = book_steps(:one)
+    @step = steps(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:book_steps)
+    assert_not_nil assigns(:steps)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class BookStepsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create book_step" do
-    assert_difference('BookStep.count') do
-      post :create, book_step: { book_id: @book_step.book_id, description: @book_step.description, id: @book_step.id, title: @book_step.title }
+  test "should create step" do
+    assert_difference('Step.count') do
+      post :create, step: { book_id: @step.book_id, description: @step.description, id: @step.id, title: @step.title }
     end
 
-    assert_redirected_to book_step_path(assigns(:book_step))
+    assert_redirected_to step_path(assigns(:step))
   end
 
-  test "should show book_step" do
-    get :show, id: @book_step
+  test "should show step" do
+    get :show, id: @step
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @book_step
+    get :edit, id: @step
     assert_response :success
   end
 
-  test "should update book_step" do
-    put :update, id: @book_step, book_step: { book_id: @book_step.book_id, description: @book_step.description, id: @book_step.id, title: @book_step.title }
-    assert_redirected_to book_step_path(assigns(:book_step))
+  test "should update step" do
+    put :update, id: @step, step: { book_id: @step.book_id, description: @step.description, id: @step.id, title: @step.title }
+    assert_redirected_to step_path(assigns(:step))
   end
 
-  test "should destroy book_step" do
-    assert_difference('BookStep.count', -1) do
-      delete :destroy, id: @book_step
+  test "should destroy step" do
+    assert_difference('Step.count', -1) do
+      delete :destroy, id: @step
     end
 
-    assert_redirected_to book_steps_path
+    assert_redirected_to steps_path
   end
 end

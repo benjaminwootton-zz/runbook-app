@@ -7,6 +7,4 @@ describe RunStep do
   		run.should be_in_role("some role")
   	end
 
-
-
 end
