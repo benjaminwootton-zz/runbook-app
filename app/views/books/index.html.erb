@@ -1,6 +1,5 @@
 <%= content_for :title, 'ACME Ltd Run Books' %>
 
-
 <div class="department">
 				
 	<h2>Some Run Book Category</h2>
@@ -10,19 +9,15 @@
 		<div class="user-card">
 					
 			<div class="avatar">
-				<%= image_tag 'avatar.jpg' %>
+				<%= image_tag 'avatar.png', :width => '150' %>
 
 			</div> <!-- .user-card-avatar -->
 			
 			<div class="details">
-				<p><strong><%=  book.title %></strong><br />
-					(702) 555-5555<br />
-					<%= link_to book.title, book %></p>
+				<p><strong><%= link_to book.title, book %></strong></p>
 			</div> <!-- .user-card-content -->
 		
 		</div> <!-- .user-card -->
-
-
 	  
 	<% end %>
 
@@ -30,9 +25,7 @@
 
 <div style="clear:both"/>
 
-<p><%= link_to 'New Book', new_book_path %></p>
-
-
-<br />
-
+<button class="btn btn-blue btn-check"> 
+	<p><%= link_to 'New Book', new_book_path %></p>
+</button>
 

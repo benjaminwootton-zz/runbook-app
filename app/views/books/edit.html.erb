@@ -1,6 +1,5 @@
-<h1>Editing book</h1>
+<%= content_for :title, 'ACME Ltd Run Books > ' + @book.title + ' > Edit Run Book Details' %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', @book %>

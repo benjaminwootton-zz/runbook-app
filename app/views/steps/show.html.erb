@@ -1,18 +1,42 @@
 <%= content_for :title, 'ACME Ltd Run Books > ' + @step.book.title + ' > ' + @step.title %>
 
 
-<% if !@runs.nil? %>
-	<p><b>This RunBook is currently being ran <%= @runs.size %> times</b><br>
-<% end %>
+<div class="department">
+
+	<h2>Step Description</h2>
 
 <p><i><%= @step.description %></i></p>
 
+	<h2>Captured Output</h2>
+
+	<textarea cols="200" rows="20">asdsad</textarea>
+
+<br><br>
+	<h2>Confirmations</h2>
+<p>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
+	</p>
+</div>
+
+<div style="clear:both"/>
 <% unless @step.previous.nil? %>
-	<%= link_to 'Previous', @step.previous  %> | 
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Previous', @step.previous  %>
+	</button>
 <% end %>
 
 <% if !@step.next.nil? %>
-	<%= link_to 'Next', @step.next   %>
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Next', @step.next   %>
+	</button>
 <% else %>
-	<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
+	</button>
 <% end %>

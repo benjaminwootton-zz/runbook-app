@@ -1,9 +1,13 @@
 <%= content_for :title, 'ACME Ltd Run Books > ' + @run.book.title + ' > Begin New Run'  %>
 
-<p><b>Book: <%= @run.book.title %></b></p>
+
+<p><i>Are you sure you wish to run this Run Book?</i></p>
 
 <%= render 'form' %>
 
 </br>
 
-<%= link_to 'Back', @run.book %>
+<% if !@run.book.runs.nil? %>
+	<p><b>ALERT: This RunBook is currently being ran <%= @run.book.runs.size %> times</b><br>
+<% end %>
+

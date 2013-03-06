@@ -27,8 +27,8 @@ class StepsController < ApplicationController
   # GET /steps/new
   # GET /steps/new.json
   def new
-    book = Book.find(params[:book_id])    
-    @step = book.steps.build
+    @book = Book.find(params[:book_id])    
+    @step = @book.steps.build
 
     respond_to do |format|
       format.html # new.html.erb
