@@ -5,9 +5,10 @@
   <%= @run.complete %>
 </p>
 
-<%= link_to 'Send A Mail Of This Run', method: :post, :controller => 'runs', :id => @run.id, :action => 'sendmail'  %>
+<button class="btn btn-blue btn-check"> 
+	<%= link_to 'Send A Mail Of This Run', method: :post, :controller => 'runs', :id => @run.id, :action => 'sendmail'  %>
+</button>
 
-<br/>
-<p>
-<%= link_to 'Done', @run.book %>
-</p>
+<button class="btn btn-blue btn-check"> 
+	<%= link_to 'Done', @run.book %>
+</button>
