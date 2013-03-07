@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe RunStep do
+describe Step do
     
-    it "do some fish" do 
+    it "d o some fish" do 
   		run = Run.new
   		run.should be_in_role("some role")
   	end

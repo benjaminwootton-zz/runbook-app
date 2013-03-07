@@ -1,5 +1,18 @@
 	<%= content_for :title, 'ACME Ltd Run Books > ' + @book.title %>
 
+	<!-- Navigation buttons -->
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Execute Runbook', new_book_run_path(@book) %> 
+	</button>
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Edit Runbook Details', edit_book_path(@book) %>
+	</button>
+	<button class="btn btn-blue btn-check"> 
+		<%= link_to 'Add Step', new_book_step_path(@book) %>
+	</button>
+
+	<br/><br/>
+
 	<p><i><%= @book.description %></i></p>
 
 
@@ -76,17 +89,7 @@
 	<div style="clear:both"/>
 	<br>
 
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Execute Runbook', new_book_run_path(@book) %> 
-	</button>
-
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Edit Runbook Details', edit_book_path(@book) %>
-	</button>
-
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Add Step', new_book_step_path(@book) %>
-	</button>
+	
 
 
 

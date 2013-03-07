@@ -1,0 +1,27 @@
+<h1>Listing step_validations</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Step</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @step_validations.each do |step_validation| %>
+  <tr>
+    <td><%= step_validation.id %></td>
+    <td><%= step_validation.step_id %></td>
+    <td><%= step_validation.description %></td>
+    <td><%= link_to 'Show', step_validation %></td>
+    <td><%= link_to 'Edit', edit_step_validation_path(step_validation) %></td>
+    <td><%= link_to 'Destroy', step_validation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Step validation', new_step_validation_path %>

@@ -1,6 +1,14 @@
 <%= content_for :title, 'ACME Ltd Run Books' %>
 
 <div class="department">
+
+<div style="clear:both"/>
+
+<button class="btn btn-blue btn-check"> 
+	<p><%= link_to 'New Book', new_book_path %></p>
+</button>
+
+<br/><br/>
 				
 	<h2>Some Run Book Category</h2>
 	
@@ -23,9 +31,5 @@
 
 </div>
 
-<div style="clear:both"/>
 
-<button class="btn btn-blue btn-check"> 
-	<p><%= link_to 'New Book', new_book_path %></p>
-</button>
 

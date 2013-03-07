@@ -1,0 +1,29 @@
+<%= form_for(@step_validation) do |f| %>
+  <% if @step_validation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step_validation.errors.count, "error") %> prohibited this step_validation from being saved:</h2>
+
+      <ul>
+      <% @step_validation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :step_id %><br />
+    <%= f.number_field :step_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

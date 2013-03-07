@@ -1,42 +1,47 @@
 <%= content_for :title, 'ACME Ltd Run Books > ' + @step.book.title + ' > ' + @step.title %>
 
-
 <div class="department">
+
+	<!-- Navigation buttons -->
+	<div style="clear:both"/>
+	<% unless @step.previous.nil? %>
+		<button class="btn btn-blue btn-check"> 
+			<%= link_to 'Previous', @step.previous  %>
+		</button>
+	<% end %>
+	<% if !@step.next.nil? %>
+		<button class="btn btn-blue btn-check"> 
+			<%= link_to 'Next', @step.next   %>
+		</button>
+	<% else %>
+		<button class="btn btn-blue btn-check"> 
+			<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
+		</button>
+	<% end %>
+	<br/><br/>
+	
+	<!-- End navigation buttons -->
 
 	<h2>Step Description</h2>
 
-<p><i><%= @step.description %></i></p>
+	<p><i><%= @step.description %></i></p>
 
 	<h2>Captured Output</h2>
 
-	<textarea cols="200" rows="20">asdsad</textarea>
+	<textarea cols="150" rows="10"></textarea>
 
-<br><br>
-	<h2>Confirmations</h2>
-<p>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	<%= image_tag 'cross.png'%> I have confirmed that ....<br>
-	</p>
+	<div style="clear:both"/>
+	<% if !@step.step_validations.empty? %>
+		<br/>
+		<h2>Confirmation Steps</h2>
+		<p>
+			<% @step.step_validations.each do |validation|  %>
+				<%= image_tag 'cross.png', :align => 'absmiddle' %> <%= validation.description %><br>
+			<% end %>
+		</p>
+	<% end %>
+	</div>
+
+
+
 </div>
-
-<div style="clear:both"/>
-<% unless @step.previous.nil? %>
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Previous', @step.previous  %>
-	</button>
-<% end %>
-
-<% if !@step.next.nil? %>
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Next', @step.next   %>
-	</button>
-<% else %>
-	<button class="btn btn-blue btn-check"> 
-		<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
-	</button>
-<% end %>

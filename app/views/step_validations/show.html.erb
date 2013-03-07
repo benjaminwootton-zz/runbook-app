@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @step_validation.id %>
+</p>
+
+<p>
+  <b>Step:</b>
+  <%= @step_validation.step_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @step_validation.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_step_validation_path(@step_validation) %> |
+<%= link_to 'Back', step_validations_path %>

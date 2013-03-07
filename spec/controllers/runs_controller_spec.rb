@@ -24,7 +24,11 @@ describe RunsController do
   # Run. As you add validations to Run, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "id" => "1" }
+    { "id" => "1", 
+      :book => Book.new( 
+          :id=>1,
+          :step=>Step.new(:id=>1) ) 
+    }
   end
 
   # This should return the minimal set of values that should be in the session
