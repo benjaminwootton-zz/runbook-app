@@ -1,5 +1,7 @@
 Runbook::Application.routes.draw do
   
+  devise_for :users
+
   resources :step_validations
 
   match 'runs/:id/finish' => 'runs#finish'
