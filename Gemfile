@@ -30,3 +30,4 @@ gem 'guard-rspec'
 
 gem 'devise'
 
+gem 'rb-readline'
