@@ -28,16 +28,11 @@
 
 	<script type="text/javascript"> 
 	$(document).ready(function(){
-		
-	//Set default open/close settings
-
+		//Set default open/close settings
 		$('.tab_container').tabs ();
 	 
 	});
 	</script> 
-
-
-
 </head>
 <body>
 <div id="wrapper">
@@ -48,6 +43,12 @@
 				</li>
 				<li class="mega">
 					<a href="/" class="mega-link">User Administration</a>	
+				</li>
+				<li class="mega">
+					<%= link_to 'Login', new_user_session_path, :class => 'mega-link' %>
+				</li>
+					<li class="mega">
+					<%= link_to 'Logout', destroy_user_session_path, :class => 'mega-link', :method => :delete %>
 				</li>
 			</ul>
 		</div> 
