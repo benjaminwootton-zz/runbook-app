@@ -9,5 +9,9 @@ class Run < ActiveRecord::Base
   	true
   end
 
+  def append_step_output output
+    puts 'APPENDING STEP OUTPUT - ' + output
+  end
+
 end
  

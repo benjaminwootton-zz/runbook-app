@@ -1,28 +1,37 @@
 <%= form_for(@step, :html => { :class => "form label-inline" } ) do |f| %>
-  <% if @step.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
 
-      <ul>
-      <% @step.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<button class="btn btn-blue btn-check">
+  <p><%= link_to 'Back', book_path(@step.book) %></p>
+</button>
 
-   <div class="field">
-    <%= f.hidden_field :book_id %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :class=>"medium"  %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>  
+<button class="btn btn-blue btn-check">
+  <p><%= f.submit %></p>
+</button>
+
+<br/></br>
+
+<h2>Add Step To Run Book</h2>
+
+<% if @step.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+  <ul>
+    <% @step.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="field">
+  <%= f.hidden_field :book_id %>
+</div>
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title, :class=>"medium"  %>
+</div>
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_area :description, :rows => 5, :cols => 100 %>
+</div>
 <% end %>

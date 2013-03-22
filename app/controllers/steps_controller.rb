@@ -60,6 +60,14 @@ class StepsController < ApplicationController
   def update
     @step = Step.find(params[:id])
 
+    puts 'yyyyyyyyyyy'
+    
+    if !params[:step][:captured_output].nil?
+      captured_output = params[:step][:captured_output]
+      current_run = Run.first
+      current_run.append_step_output captured_output 
+    end
+
     respond_to do |format|
       if @step.update_attributes(params[:step])
         format.html { redirect_to @step, notice: 'Book step was successfully updated.' }

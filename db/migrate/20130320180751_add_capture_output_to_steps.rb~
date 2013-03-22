@@ -1,0 +1,5 @@
+class AddCaptureOutputToRuns < ActiveRecord::Migration
+  def change
+    add_column :runs, :capture_output, :boolean
+  end
+end
