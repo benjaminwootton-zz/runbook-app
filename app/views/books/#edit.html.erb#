@@ -1,3 +1,0 @@
-<%= content_for :title, 'ACME Ltd Run Books > ' + @book.title + ' > Edit Run Book Details' %>
-
-<%= render 'form' %>

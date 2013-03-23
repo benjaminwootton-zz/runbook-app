@@ -1,5 +1,0 @@
-<h2>Add Step To Run Book</h2>
-
-<%= render 'form' %>
-
-

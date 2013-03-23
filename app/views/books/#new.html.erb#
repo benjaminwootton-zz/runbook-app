@@ -1,6 +1,0 @@
-<h2>Create New Run Book</h2>
-
-<%= render 'form' %>
-
-
-
