@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>RunBook</title>
+	<%= stylesheet_link_tag "screen" %>
+	<%= stylesheet_link_tag "plugin" %>
+	<%= stylesheet_link_tag "custom" %>
+	<%= stylesheet_link_tag "login" %>
+	<%= csrf_meta_tags %>
+	<%= javascript_include_tag "jquery/jquery.1.4.2.min" %>
+	<%= javascript_include_tag "slate/slate" %>
+	<%= javascript_include_tag "slate/slate.portlet" %>
+	<%= javascript_include_tag "widgets" %>
+
+	<script src="/javascripts/plugin.js" type="text/javascript"></script>
+
+	<script type="text/javascript" charset="utf-8">
+	  $(function () 
+	  {
+	  slate.init ();
+	  slate.portlet.init ();	
+	  });
+	</script>
+
+	<script type="text/javascript"> 
+	  $(document).ready(function(){
+	  //Set default open/close settings
+	  $('.tab_container').tabs ();
+	  
+	  });
+	</script> 
+  </head>
+  <body>
+	<div id="login">	 
+	  <h1 id="title"><a href="">Slate Admin</a></h1>	  
+	  <div id="login-body" class="clearfix"> 	   
+	      <div class="content_front">
+	        <div class="pad">
+			  <%= yield %>	         			  
+	        </div>
+	      </div>		  
+	  </div>
+	</div> 
+  </body>
+</html>
+
+
+

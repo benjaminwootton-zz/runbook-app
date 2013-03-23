@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RunBook</title>
+  <head>
+	<title>RunBook</title>
 
-<%= stylesheet_link_tag "screen" %>
-	<!-- <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
-	<link rel="stylesheet" href="/css/plugin.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
-	<link rel="stylesheet" href="/css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<link rel="stylesheet" href="/css/login.css" type="text/css" media="screen" title="no title" charset="utf-8" /> -->
+	<%= stylesheet_link_tag "screen" %>
+	<%= javascript_include_tag :all %>
 	<%= stylesheet_link_tag "plugin" %>
 	<%= stylesheet_link_tag "custom" %>
 	<%= csrf_meta_tags %>
@@ -15,59 +12,49 @@
 	<%= javascript_include_tag "slate/slate" %>
 	<%= javascript_include_tag "slate/slate.portlet" %>
 	<%= javascript_include_tag "widgets" %>
-
+	
 	<script src="/javascripts/plugin.js" type="text/javascript"></script>
 
-	<script type="text/javascript" charset="utf-8">
-		$(function () 
-		{
-			slate.init ();
-			slate.portlet.init ();	
-		});
-	</script>
-
 	<script type="text/javascript"> 
-	$(document).ready(function(){
-		//Set default open/close settings
-		$('.tab_container').tabs ();
-	 
-	});
+	  $(document).ready(function(){
+	  //Set default open/close settings
+	  $('.tab_container').tabs ();
+	  
+	  });
 	</script> 
-</head>
-<body>
-<div id="wrapper">
-		<div id="nav">	
-			<ul class="mega-container mega-grey">
-				<li class="mega">
-					<a href="/" class="mega-link">Our RunBooks</a>	
-				</li>
-				<li class="mega">
-					<a href="/" class="mega-link">User Administration</a>	
-				</li>
-				<li class="mega">
-					<%= link_to 'Login', new_user_session_path, :class => 'mega-link' %>
-				</li>
-					<li class="mega">
-					<%= link_to 'Logout', destroy_user_session_path, :class => 'mega-link', :method => :delete %>
-				</li>
-			</ul>
-		</div> 
+  </head>
+  <body>
+	<div id="wrapper">
+	  <div id="nav">	
+		<ul class="mega-container mega-grey">
+		  <li class="mega">
+			<%= link_to 'Our Run Books', books_path, :class => 'mega-link' %>
+		  </li>
+		  <li class="mega">
+			<%= link_to 'Logout', destroy_user_session_path, :class => 'mega-link', :method => :delete %>
+		  </li>
+		  <li class="mega">
+			<%= link_to 'Account Settings', current_user, :class => 'mega-link' %>
+			
+		  </li>
+		</ul>
+	  </div> 
 
-		<div id="content" class="xfluid">
+	  <div id="content" class="xfluid">
 		
 		<a name="line"></a>
 		<div class="portlet x12">
-			<div class="portlet-header">
-				<h4><%= yield(:title) %></h4>
-			</div>
+		  <div class="portlet-header">
+			<h4><%= yield(:title) %></h4>
+		  </div>
 
-		<div class="portlet-content">
-		  <div class="department">
-			<%= yield %>
+		  <div class="portlet-content">
+			<div class="department">
+			  <%= yield %>
+			</div>
 		  </div>
 		</div>
-	</div>
-</div>
+	  </div>
 
-</body>
+  </body>
 </html>

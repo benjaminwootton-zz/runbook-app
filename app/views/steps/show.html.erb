@@ -20,16 +20,17 @@
 	<%= link_to 'Finish', :controller => 'runs', :id => @current_run.id, :action => 'finish'   %>
   </button>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>  
   <br/><br/>
   
   <!-- End navigation buttons -->
 
   <h2>Step Description</h2>
   <p><i><%= @step.description %></i></p>
+
+  <% if !@step.step_screenshot? %>
+  <h2>Step Image</h2>
+  <%= image_tag @step.step_screenshot.url %>
+  <% end %>
 
   <% if @step.capture_output %>
   <h2>Captured Output</h2>  

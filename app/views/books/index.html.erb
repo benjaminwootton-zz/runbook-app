@@ -11,7 +11,6 @@
 
   <h2>Our Run Books</h2>
 
-  
   <table border=1 cellspacing=0 cellpadding=5 rel="datatable">
 	<thead>
 	  <tr>
@@ -19,6 +18,7 @@
 		<th>Edit</th>
 		<th>Runs In Progress?</th>
 		<th>Last Run</th>
+		<th>Delete Book</th>
 	  </tr>
 	</thead>
    	<tbody>
@@ -28,6 +28,7 @@
 		<td width="400"><%= link_to image_tag('pencil.png'), edit_book_path(book) %>
 		<td width="200"><%= book.number_of_open_runs %></td>
 		<td width="400"><%= book.most_recent_run.created_at unless book.most_recent_run.nil? %></td>
+		<td width="400"><%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>		 
 	  <% end %>
   </table>

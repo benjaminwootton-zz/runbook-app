@@ -5,17 +5,15 @@
 </button>
 
 <button class="btn btn-blue btn-check">
-  <p><%= f.submit %></p>
+	<p><%= link_to_submit 'Create' %></p>
 </button>
 
 <br/></br>
 
 <h2>Add Step To Run Book</h2>
-
 <% if @step.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
-
   <ul>
     <% @step.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
@@ -24,14 +22,25 @@
 </div>
 <% end %>
 <div class="field">
-  <%= f.hidden_field :book_id %>
-</div>
-<div class="field">
   <%= f.label :title %>
   <%= f.text_field :title, :class=>"medium"  %>
 </div>
 <div class="field">
   <%= f.label :description %>
   <%= f.text_area :description, :rows => 5, :cols => 100 %>
+</div>
+<div class="field">
+  <%= f.label :capture_output %>
+  <%= f.check_box :capture_output %>
+</div>
+
+<div class="field">
+  <%= f.label :step_screenshot %>
+  <%= f.file_field :step_screenshot %>
+</div>
+
+
+<div class="field">
+  <%= f.hidden_field :book_id %>
 </div>
 <% end %>

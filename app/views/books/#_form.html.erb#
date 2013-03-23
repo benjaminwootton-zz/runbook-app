@@ -7,7 +7,7 @@
   </button>
 
   <button class="btn btn-blue btn-check">
-	<p><%= link_to_submit 'Create' %></p>
+	<p_Fo><%= link_to_submit 'Create' %></p>
   </button>
 
   <br/></br>

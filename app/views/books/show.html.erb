@@ -28,7 +28,6 @@
 	<li><a href="#tab1">Steps</a></li>
 	<% end %>  
 
-
 	<% if !@book.runs.empty? %>
 	<li><a href="#tab2">Runs</a></li>
 	<% end %>
@@ -46,24 +45,21 @@
 			  <th>Title</th>
 			  <th>Edit</th>
 			  <th>Sort</th>
-			  <th>ads</th>	
-			  <th>ads</th>	
-			  <th>ads</th>
+			  <th>Destroy</th>				  
 			</tr>
 		  </thead>	
 		  <tbody>
 			<% @book.steps.each_with_index do |step,index| %>
 			<tr>
-			  <td width="100"><%= index %></td>
-			  <td width="200"><%= step.title %></td>
-			  <td width="500"><%= link_to image_tag('pencil.png') , edit_book_step_path(step.book,step) %>
-			  <td width=100>
+			  <td width="50"><%= index %></td>
+			  <td width="300"><%= step.title %></td>
+			  <td width="50"><%= link_to image_tag('pencil.png') , edit_book_step_path(step.book,step) %>
+			  <td width="50">
 				<%= image_tag 'sort_asc.png'%>
 				<%= image_tag 'sort_desc.png'%>
 			  </td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
+			  <td width="50"><%= button_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
 			</tr>
 			<% end %>
 		  </tbody>

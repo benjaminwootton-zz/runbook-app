@@ -3,7 +3,7 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = @book.steps.all
+    @steps = @book.steps.all unless @book.steps.nil
 
     respond_to do |format|
       format.html # index.html.erb
@@ -84,9 +84,9 @@ class StepsController < ApplicationController
   def destroy
     @step = Step.find(params[:id])
     @step.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to steps_url }
+      format.html { redirect_to book_path(@step.book) }
       format.json { head :no_content }
     end
   end

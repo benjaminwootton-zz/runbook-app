@@ -43,6 +43,7 @@ class RunsController < ApplicationController
   # POST /runs.json
   def create
     @run = Run.new(params[:run])
+    @run.user_id = session[:current_user]
 
     respond_to do |format|
       if @run.save

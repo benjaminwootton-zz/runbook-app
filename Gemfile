@@ -31,3 +31,5 @@ gem 'guard-rspec'
 gem 'devise'
 
 gem 'rb-readline'
+
+gem 'paperclip'
