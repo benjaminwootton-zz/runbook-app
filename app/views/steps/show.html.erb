@@ -3,7 +3,7 @@
 <div class="department">
 
   <%= form_for(@step, :html => { :class => "form label-inline" } ) do |f| %>
-
+  
   <!-- Navigation buttons -->
   <div style="clear:both"/>
   <% unless @step.previous.nil? %>
@@ -24,6 +24,8 @@
   
   <!-- End navigation buttons -->
 
+  <h1><%= @step.title %></h1>
+
   <h2>Step Description</h2>
   <p><i><%= @step.description %></i></p>
 
@@ -35,7 +37,7 @@
   <% if @step.capture_output %>
   <h2>Captured Output</h2>  
   <div class="field">
-    <%= f.text_area :captured_output  %>
+    <%= f.text_area :captured_output, :cols => 100, :rows => 5  %>
   </div>
   <% end %>
 

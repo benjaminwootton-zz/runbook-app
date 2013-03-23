@@ -4,7 +4,7 @@ class Book < ActiveRecord::Base
   has_many :steps
   has_many :runs
 
-  validates_presence_of :title
+  validates_presence_of :title, :description
 
   def number_of_open_runs
     completed_runs = runs.all

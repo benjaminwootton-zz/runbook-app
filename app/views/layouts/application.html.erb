@@ -31,11 +31,10 @@
 			<%= link_to 'Our Run Books', books_path, :class => 'mega-link' %>
 		  </li>
 		  <li class="mega">
-			<%= link_to 'Logout', destroy_user_session_path, :class => 'mega-link', :method => :delete %>
+			<%= link_to 'Account Settings', current_user, :class => 'mega-link' %>			
 		  </li>
 		  <li class="mega">
-			<%= link_to 'Account Settings', current_user, :class => 'mega-link' %>
-			
+			<%= link_to 'Logout', destroy_user_session_path, :class => 'mega-link', :method => :delete %>
 		  </li>
 		</ul>
 	  </div> 

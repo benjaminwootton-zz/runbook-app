@@ -3,14 +3,14 @@
 <!-- Navigation buttons -->
 <% if !@book.steps.empty? %> 
 <button class="btn btn-blue btn-check"> 
-  <%= link_to 'Execute Run Book', new_book_run_path(@book) %> 
+  <p><%= link_to 'Execute Run Book', new_book_run_path(@book) %></p>
 </button>
 <% end %>
 <button class="btn btn-blue btn-check"> 
-  <%= link_to 'Edit Run Book Details', edit_book_path(@book) %>
+  <p><%= link_to 'Edit Run Book Details', edit_book_path(@book) %></p>
 </button>
 <button class="btn btn-blue btn-check"> 
-  <%= link_to 'Add Step To Run Book', new_book_step_path(@book) %>
+  <p><%= link_to 'Add Step To Run Book', new_book_step_path(@book) %></p>
 </button>
 
 <br/><br/>

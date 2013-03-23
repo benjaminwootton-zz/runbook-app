@@ -1,4 +1,4 @@
-<%= form_for(@step, :html => { :class => "form label-inline" } ) do |f| %>
+<%= form_for(@step, :html => { :class => "form label-inline", :multipart => true } ) do |f| %>
 
 <button class="btn btn-blue btn-check">
   <p><%= link_to 'Back', book_path(@step.book) %></p>

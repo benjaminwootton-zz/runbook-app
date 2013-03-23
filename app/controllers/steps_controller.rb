@@ -59,8 +59,6 @@ class StepsController < ApplicationController
   # PUT /steps/1.json
   def update
     @step = Step.find(params[:id])
-
-    puts 'yyyyyyyyyyy'
     
     if !params[:step][:captured_output].nil?
       captured_output = params[:step][:captured_output]
@@ -70,7 +68,7 @@ class StepsController < ApplicationController
 
     respond_to do |format|
       if @step.update_attributes(params[:step])
-        format.html { redirect_to @step, notice: 'Book step was successfully updated.' }
+        format.html { redirect_to @step.book, notice: 'Book step was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

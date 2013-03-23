@@ -16,19 +16,15 @@
 	  <tr>
 		<th>Title</th>
 		<th>Edit</th>
-		<th>Runs In Progress?</th>
-		<th>Last Run</th>
 		<th>Delete Book</th>
 	  </tr>
 	</thead>
    	<tbody>
 	  <% @books.each_with_index do |book,index| %>
 	  <tr>
-		<td width="600"><%= link_to book.title, book %></td>
-		<td width="400"><%= link_to image_tag('pencil.png'), edit_book_path(book) %>
-		<td width="200"><%= book.number_of_open_runs %></td>
-		<td width="400"><%= book.most_recent_run.created_at unless book.most_recent_run.nil? %></td>
-		<td width="400"><%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td width="400"><%= link_to book.title, book %></td>
+		<td width="100"><%= link_to image_tag('pencil.png'), edit_book_path(book) %>
+		<td width="100"><%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>		 
 	  <% end %>
   </table>

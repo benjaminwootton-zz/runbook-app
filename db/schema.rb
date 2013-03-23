@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320180751) do
+ActiveRecord::Schema.define(:version => 20130323113840) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -47,9 +47,13 @@ ActiveRecord::Schema.define(:version => 20130320180751) do
     t.integer  "book_id"
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.boolean  "capture_output"
+    t.string   "step_screenshot_file_name"
+    t.string   "step_screenshot_content_type"
+    t.integer  "step_screenshot_file_size"
+    t.datetime "step_screenshot_updated_at"
   end
 
   create_table "users", :force => true do |t|
