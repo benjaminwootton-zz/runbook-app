@@ -1,21 +1,6 @@
 <%= content_for :title, 'ACME Ltd Run Books > ' + @book.title %>
 
-<!-- Navigation buttons -->
-<% if !@book.steps.empty? %> 
-<button class="btn btn-blue btn-check"> 
-  <p><%= link_to 'Execute Run Book', new_book_run_path(@book) %></p>
-</button>
-<% end %>
-<button class="btn btn-blue btn-check"> 
-  <p><%= link_to 'Edit Run Book Details', edit_book_path(@book) %></p>
-</button>
-<button class="btn btn-blue btn-check"> 
-  <p><%= link_to 'Add Step To Run Book', new_book_step_path(@book) %></p>
-</button>
-
-<br/><br/>
-
-<h2>Run Book Details</h2>
+<h2><%= @book.title %></h2>
 
 <p><i><%= @book.description %></i></p>
 
@@ -41,24 +26,24 @@
 		<table border=1 cellspacing=0 cellpadding=5     rel="datatable" id="example">
 		  <thead>
 			<tr>
-			  <th>Step</th>
+			  <th>Step Number</th>
 			  <th>Title</th>
 			  <th>Edit</th>
-			  <th>Sort</th>
-			  <th>Destroy</th>				  
+			  <!--th>Sort</th-->
+			  <th>Delete</th>				  
 			</tr>
 		  </thead>	
 		  <tbody>
 			<% @book.steps.each_with_index do |step,index| %>
 			<tr>
-			  <td width="50"><%= index %></td>
+			  <td width="100"><%= index %></td>
 			  <td width="300"><%= step.title %></td>
 			  <td width="50"><%= link_to image_tag('pencil.png') , edit_book_step_path(step.book,step) %>
-			  <td width="50">
+			  <!--td width="50">
 				<%= image_tag 'sort_asc.png'%>
 				<%= image_tag 'sort_desc.png'%>
-			  </td>
-			  <td width="50"><%= button_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			  </td-->
+			  <td width="50"><%= link_to image_tag('cross.png'), step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 			</tr>
 			<% end %>
@@ -77,17 +62,15 @@
 			<tr>
 			  <th width="100">Step</th>
 			  <th width="200">User</th>
-			  <th width="200">Start Time</th>
-			  <th width="100">Complete?</th>
+			  <th width="250">Start Time</th>
 			</tr>
 		  </thead>	
 		  <tbody>
 			<% @book.runs.each_with_index do |run,index| %>
 			<tr>
 			  <td><%= index %></td> 
-			  <td><%= run.user %>
-			  <td><%= run.created_at %></td>
-			  <td><%= run.complete %></td>
+			  <td><%= run.user.email %>
+			  <td><%= run.created_at.strftime("%A %d %B %Y - %H:%M") %></td>
 			</tr>
 			<% end %>
 		  </tbody>
@@ -101,15 +84,15 @@
 
 </div> <!-- .tab_container -->
 <% end %>
+</div>
+<br/><br/></br></br>
 
-<div style="clear:both"/>
-<br>
-
-
-
-
-
-<div style="clear:both"/>
-
-
-
+<!-- Navigation buttons -->
+<% if !@book.steps.empty? %> 
+<button class="btn btn-blue btn-check"> 
+  <p><%= link_to 'Execute Run Book', new_book_run_path(@book) %></p>
+</button>
+<% end %>
+<button class="btn btn-blue btn-check"> 
+  <p><%= link_to 'Add Step To Run Book', new_book_step_path(@book) %></p>
+</button>

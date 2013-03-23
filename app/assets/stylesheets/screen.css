@@ -11,7 +11,7 @@ table, caption, tbody, tfoot, thead, tr, th, td
 {
 font-weight: inherit;
 font-style: inherit;
-font-size: 100%;
+font-size: 14px;
 font-family: inherit;
 padding: 0;
 margin: 0;
@@ -32,9 +32,9 @@ h1,h2,h3,
 h4,h5,h6		{ color: #111; margin-bottom: .75em; }
 
 h1 				{ font-size: 30px; line-height: 1em; }
-h2 				{ font-size: 24px; font-weight: normal; color: #222; margin-bottom: 1em }
-h3 				{ font-size: 16px; color: #333; line-height: 1; margin-bottom: .75em }
-h4 				{ font-size: 14px; color: #666; line-height: 1.25; margin-bottom: 1.25em }
+h2 				{ font-size: 24px; font-weight: normal; color: #066ECD; margin-bottom: 1em; }
+h3 				{ font-size: 16px; color: #066ECD; line-height: 1; margin-bottom: .75em }
+h4 				{ font-size: 14px; color: #066ECD; line-height: 1.25; margin-bottom: 1.25em }
 h5 				{ font-size: 12px; font-weight: bold; margin-bottom: 1.5em }
 h6 				{ font-size: 11px; font-weight: bold }
 
@@ -203,6 +203,7 @@ body
 	width: 93%; 
 	height: 47px; 
 	
+	color: white;
 	margin: 0 auto 20px;
 	
 	position: relative;
@@ -219,6 +220,10 @@ body
 	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.35);
 	box-shadow: 1px 1px 3px rgba(0,0,0,.35);
 }
+
+#nav a { color: white; text-decoration: none; }
+
+#nav a:hover { color: yellow; }
 
 #content { width: 95%; margin: 0 auto; position: relative; z-index: 10; }
 
@@ -361,7 +366,9 @@ body
 
 
 
-
+#description {
+	color:green;
+}
 
 
 /* -------------------------------------------------------------
@@ -544,189 +551,6 @@ height: 0;
 
 
 
-
-
-/* -------------------------------------------------------------- 
-   Menu
--------------------------------------------------------------- */
-
-.mega-container
-{
-	text-align: left;
-	list-style-type: none !important;
-	padding: 0;
-	margin: 0;
-}
-
-/* List item styling */
-.mega-container li			{ list-style-type: none; }
-
-.mega
-{
-	float: left;
-	position: relative;
-	z-index: 10;
-	padding-left: 10px; 
-	margin: 8px 0 10px 0;
-	list-style-type: none !important;
-}
-
-	.mega:first-child { background: none !important; }
-
-	.mega:hover { z-index: 10000 !important; }
-	*:first-child+html .mega:hover { zoom: 1 !important;  }
-
-
-/* Menu tab styling */	
-
-.mega .mega-tab,
-.mega .mega-link,
-.mega-current .mega-tab,
-.mega-current .mega-link
-{
-
-	font-weight: bold;
-
-	font-size: 12px;
-	text-decoration: none;
-	line-height: 0;	
-	display: block;
-	padding: 15px 35px 15px 10px;	
-
-	cursor: pointer;	
-	position: relative;	
-	z-index: 2;	
-
-	
-	text-shadow: 1px 1px 3px rgba(0,0,0,.35);
-}
-
-.mega-current .mega-tab { background-position: right -100px !important; }
-
-.mega-link { background-position: right -2000px !important; color: #fff !important; padding-right: 10px !important; padding-bottom: 10px;  }
-
-.mega-link:hover,
-.mega-current .mega-link
-{ 
-	text-decoration:underline;
-	background-position: right -100px !important;		
-	-webkit-border-radius: 4px !important;
-	-moz-border-radius: 4px !important;
-
-}
-
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .mega .mega-tab,
-    .mega .mega-link  { padding-bottom: 10px !important; }
-}
-
-	.mega:hover .mega-tab
-	{
-		background-position: right -100px; 
-		background-color: #AAA;
-		-webkit-border-bottom-right-radius: 0;
-		-webkit-border-bottom-left-radius: 0;
-		-moz-border-radius-bottomright: 0;
-		-moz-border-radius-bottomleft: 0;
-		border-bottom-right-radius: 0;
-		border-bottom-left-radius: 0;
-	}
-
-	
-/* Content container styling */	
-
-.mega-content 
-{ 
-	width: 175px;
-	display: none; 
-	-webkit-border-radius: 4px;
-	-webkit-border-top-left-radius: 0;
-	-moz-border-radius: 4px;
-	-moz-border-radius-topleft: 0;
-	border-radius: 4px;
-	border-top-left-radius: 0;	
-	padding: 10px;
-	position: absolute;
-	top: 98%;	
-	left: 10px;
-	border: 4px solid #aaa;
-	text-align: left;
-	color: #222;
-	font-size: 11px;
-	z-index: 6;
-	background: #FFF;
-}
-
-	.mega .mega-content li { background-image: none; }
-	.mega:hover .mega-content { display: block; border-color: #aaa; }	
-
-	*+html .mega-content { padding-bottom: 5px !important; } /* Fix padding in IE7 */
-	*+html .mega-menu li > ul { padding-top: 5px !important; padding-bottom: 10px !important; }
-	
-
-
-/* Drop Menu Styling */
-
-.mega-menu { background: #aaa; filter: none !important; padding: 5px 5px 0 !important; z-index: 10000 !important; }
-
-.mega-menu ul { list-style-type: none; margin: 0; }
-	
-	.mega-menu li { margin-bottom: .5em; }
-	
-		.mega-menu li a
-		{			 
-			background-color: #F9F9F9;  
-			display: block;
-			padding: 5px 10px 5px 10px;
-			color: #358;
-			text-decoration: none;
-			font-weight: bold;
-			-moz-border-radius: 4px; 
-			-webkit-border-radius: 4px; 
-			border-radius: 4px;
-		}
-		
-		.mega-menu li a.hasSub { background-image:  url(../images/link-menu-arrow.png); background-repeat: no-repeat; background-position: 95% 50% ;}
-
-		
-			.mega-menu li a:hover { background-color: #DDD; }
-
-		.mega-menu li { position: relative; }
-			.mega-menu li:hover > ul { display: block !important; }
-			
-		.mega-menu li > ul { background: #689C29; width: 175px; padding: 10px 10px 5px;  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; z-index: 1000; position: absolute; left: 100%; top: 0; display: none; }
-
-
-/* Utility Classes */
-
-.mega-left { left: 0; }
-.mega-right { left: auto; right: 0; }
-
-	.mega-right 
-	{ 
-		-webkit-border-radius: 4px;
-		-webkit-border-top-right-radius: 0;
-		-moz-border-radius: 4px;
-		-moz-border-radius-topright: 0;
-		border-radius: 4px;
-		border-top-right-radius: 0;	
-	}
-
-
-/* Color styling */
-
-
-.mega-container .mega-tab { background-color: transparent; color: #fff !important; background-position: right top; border: 1px solid transparent; }
-
-.mega-container .mega:hover .mega-tab,
-.mega-container .mega:hover .mega-link,
-.mega-container .mega-current .mega-tab,
-.mega-container .mega-current .mega-link  { background-color: #263849; color: #fff !important; border-color: #1C2B37;   }
-
-.mega-container .mega:hover .mega-content { border-color: #263849; }
-.mega-container .mega-menu { background: #263849 !important; }
-.mega-container li > ul { background-color: #263849 !important; }
 
 
 

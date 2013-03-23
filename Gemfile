@@ -33,3 +33,5 @@ gem 'devise'
 gem 'rb-readline'
 
 gem 'paperclip'
+
+gem 'formatize'	

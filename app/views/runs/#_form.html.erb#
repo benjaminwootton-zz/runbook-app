@@ -18,7 +18,7 @@
 
   <div class="actions">
 	<button class="btn btn-blue btn-check">
-	  <p><%= link_to_submit 'Create' %></p>
+	  <p><%= link_to_submit 'Start!' %></p>
 	</button>
   </div>
 <% end %>

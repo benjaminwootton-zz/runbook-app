@@ -1,16 +1,5 @@
 <%= form_for(@step, :html => { :class => "form label-inline", :multipart => true } ) do |f| %>
 
-<button class="btn btn-blue btn-check">
-  <p><%= link_to 'Back', book_path(@step.book) %></p>
-</button>
-
-<button class="btn btn-blue btn-check">
-	<p><%= link_to_submit 'Create' %></p>
-</button>
-
-<br/></br>
-
-<h2>Add Step To Run Book</h2>
 <% if @step.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
@@ -22,12 +11,13 @@
 </div>
 <% end %>
 <div class="field">
-  <%= f.label :title %>
-  <%= f.text_field :title, :class=>"medium"  %>
+  <%= f.label :step_Title %>
+  <%= f.text_field :title, :size => 100  %>
 </div>
 <div class="field">
   <%= f.label :description %>
   <%= f.text_area :description, :rows => 5, :cols => 100 %>
+<!--p>Note - You can and probably should use <a href="http://daringfireball.net/projects/markdown/">MarkDown</a> format here to provide detailed information regarding this step</p></span-->
 </div>
 <div class="field">
   <%= f.label :capture_output %>
@@ -43,4 +33,13 @@
 <div class="field">
   <%= f.hidden_field :book_id %>
 </div>
+
+<button class="btn btn-blue btn-check">
+  <p><%= link_to 'Back', book_path(@step.book) %></p>
+</button>
+
+<button class="btn btn-blue btn-check">
+	<p><%= link_to_submit 'Create' %></p>
+</button>
+
 <% end %>

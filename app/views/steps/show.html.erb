@@ -24,18 +24,26 @@
   
   <!-- End navigation buttons -->
 
-  <h1><%= @step.title %></h1>
+  <h2><%= @step.book.title %></h2>
+  <h3><b><%= @step.title %></b></h3>
+  <hr>
 
-  <h2>Step Description</h2>
-  <p><i><%= @step.description %></i></p>
+  <div id="description">
+  <p><i><%= simple_format(@step.description) %></i></p>
+  </br></br>
+  </div>
 
-  <% if !@step.step_screenshot? %>
-  <h2>Step Image</h2>
+ 
+  <% if @step.step_screenshot? %>
+  <h3>Image</h3>
+  <hr>
   <%= image_tag @step.step_screenshot.url %>
+  </br></br>
   <% end %>
 
   <% if @step.capture_output %>
-  <h2>Captured Output</h2>  
+  <h3>Captured Output</h3>  
+  <hr>
   <div class="field">
     <%= f.text_area :captured_output, :cols => 100, :rows => 5  %>
   </div>
@@ -44,8 +52,7 @@
   <div style="clear:both"/>
   <% if !@step.step_validations.empty? %>
   <h2>Validation Steps</h2>
-  <br/>
-  <h2>Confirmation Steps</h2>
+  <hr>
   <p>
 	<% @step.step_validations.each do |validation|  %>
 	<%= image_tag 'cross.png', :align => 'absmiddle' %> <%= validation.description %><br>

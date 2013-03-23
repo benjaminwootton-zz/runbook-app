@@ -1,4 +1,5 @@
-<%= content_for :title, 'ACME Ltd Run Books > ' + @run.book.title + ' > Run Book Completed'  %>
+<h2>Run Complete</h2>
+
 
 <button class="btn btn-blue btn-check"> 
 	<%= link_to 'Send A Mail Of This Run', method: :post, :controller => 'runs', :id => @run.id, :action => 'sendmail'  %>
@@ -9,10 +10,3 @@
 </button>
 
 <br/><br/>
-
-<p>
-  <b>Complete:</b>
-  <%= @run.complete %>
-</p>
-
-

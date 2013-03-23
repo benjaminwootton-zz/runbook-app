@@ -1,6 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.9)
+    RedCloth (4.2.9-x86-mingw32)
     actionmailer (3.2.11)
       actionpack (= 3.2.11)
       mail (~> 2.4.4)
@@ -31,6 +33,7 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    bluecloth (2.2.0)
     bourne (1.1.2)
       mocha (= 0.10.5)
     builder (3.0.4)
@@ -55,6 +58,10 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    formatize (1.1.0)
+      RedCloth (~> 4.2)
+      actionpack (~> 3.0)
+      bluecloth (~> 2.2)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -186,6 +193,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  formatize
   guard
   guard-rspec
   jquery-rails

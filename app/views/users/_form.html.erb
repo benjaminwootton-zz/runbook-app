@@ -12,14 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br />
-    <%= f.number_field :id %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
   </div>
+
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.hidden_field :id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+  <br/>
+
+  <button class="btn btn-blue btn-check">
+	<p><%= link_to_submit 'Update' %></p>
+  </button>
+  
 <% end %>

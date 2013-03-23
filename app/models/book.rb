@@ -12,6 +12,6 @@ class Book < ActiveRecord::Base
   end
 
   def most_recent_run
-    completed_runs = runs.first
+    completed_runs = runs.first( :order => 'CREATED_AT DESC' )
   end
 end

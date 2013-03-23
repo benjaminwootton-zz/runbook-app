@@ -1,4 +1,4 @@
-# RunBook
+## RunBook
 
 RunBook is a simple web application for documenting, mananging, and executing operations Run Books.
 
@@ -26,11 +26,6 @@ These processes are carried out by humans as nanual steps:
 - Managing concurrent executions of books
 - Troubleshooting features
 - Escalation paths
-
-## Open Source
-
-The application is being shared as open sourced, but will potentially later be offered as SAAS at [runbookapp.com](runbookapp.com)
-
 
 
 

@@ -463,7 +463,6 @@ h2.calendar_header { font-size: 56px; text-align: center; line-height: 48px; mar
    People Page
 -------------------------------------------------------------- */		
 .department { float: left; margin-bottom: 3em; width:100%; }
-.department h2 { font-size: 18px; color: #F90; border-bottom: 1px dotted #CCC; padding-bottom: 4px; margin-bottom: 1.5em; }
 .user-card { width: 300px; font-size: 11px; margin: 0 1em 1.5em 0; float: left; }
 .user-card img 
 { 

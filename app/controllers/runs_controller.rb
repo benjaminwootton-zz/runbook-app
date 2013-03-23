@@ -24,9 +24,10 @@ class RunsController < ApplicationController
   # GET /runs/new
   # GET /runs/new.json
   def new
-
     book = Book.find(params[:book_id])    
     @run = book.runs.build
+
+
       
     respond_to do |format|
       format.html # new.html.erb
@@ -43,7 +44,7 @@ class RunsController < ApplicationController
   # POST /runs.json
   def create
     @run = Run.new(params[:run])
-    @run.user_id = session[:current_user]
+    @run.user_id = current_user.id
 
     respond_to do |format|
       if @run.save

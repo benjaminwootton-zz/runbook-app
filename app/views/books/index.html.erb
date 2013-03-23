@@ -3,11 +3,7 @@
 <div class="department">
   <div style="clear:both"/>
   
-  <button class="btn btn-blue btn-check">
-	<p><%= link_to 'Create New Run Book', new_book_path %></p>
-  </button>
 
-  <br/><br/>
 
   <h2>Our Run Books</h2>
 
@@ -15,19 +11,31 @@
 	<thead>
 	  <tr>
 		<th>Title</th>
+		<th>Number Of Steps</th>
+		<th>Last Run</th>
 		<th>Edit</th>
-		<th>Delete Book</th>
+		<th>Delete</th>
 	  </tr>
 	</thead>
    	<tbody>
 	  <% @books.each_with_index do |book,index| %>
 	  <tr>
-		<td width="400"><%= link_to book.title, book %></td>
-		<td width="100"><%= link_to image_tag('pencil.png'), edit_book_path(book) %>
-		<td width="100"><%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td width="300"><%= link_to book.title, book %></td>
+		<td width="150"><%= book.steps.size %></td>
+		<td width="250">
+		  <%= link_to book.most_recent_run.created_at.strftime("%A %d %B %Y - %H:%M"), 
+			  book.most_recent_run unless book.most_recent_run.nil? %>
+		</td>
+		<td width="50"><%= link_to image_tag('pencil.png'), edit_book_path(book) %>
+		<td width="50"><%= link_to image_tag('cross.png'), book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>		 
 	  <% end %>
   </table>
+
+  <button class="btn btn-blue btn-check">
+	<p><%= link_to 'Create New Run Book', new_book_path %></p>
+  </button>
+
 </div>
 
 

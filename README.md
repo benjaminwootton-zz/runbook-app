@@ -4,6 +4,10 @@ RunBook is a simple web application for documenting, mananging, and executing op
 
 It is aimed at system administrators and DevOps who perform manual routine tasks, helping them to do so more reliabily and with less scope for human error.
 
+
+![RunBook Image](http://benjaminwootton.github.com/RunBook/images/first.png)
+![RunBook Image](http://benjaminwootton.github.com/RunBook/images/second.png)
+
 ## What is a Run Book?
 
 [Wikipedia](http://en.wikipedia.org/wiki/Runbook) describes a RunBook as:
@@ -12,24 +16,41 @@ It is aimed at system administrators and DevOps who perform manual routine tasks
 
 ## Shouldn't this stuff be automated?
 
-All DevOps love automation.  Scripting and automating tasks around the deployment and management of your software is faster, more repeatable, more reliable, and less work than doing the same thing manually.
+All DevOps love automation! Scripting and automating tasks around the deployment and management of your software is faster, more repeatable, more reliable, and less work than doing the same thing manually.
 
-However, what about those tasks which, for whatever reason, you cannot automate?
+However, what about those tasks which, for whatever reason, you cannot automate? It is a rare and very lucky team that does not have at least some such manual repetitive tasks.
 
-Perhaps you have a lack of automated testing, or use some vendor software without an API, or simply haven't had the time to script and harden the process.
+Perhaps this is because of a lack of automated testing, or the fact that that you use some vendor software without a management API, or perhaps you simply haven't had the time to script and harden some process adequetly.
 
-These processes are carried out by humans as nanual steps:
+Ultimately, wherever humans manage manual steps, therein lies the path to miscommunication, human error, key man dependencies and ultimately, production instability.
+
+
+
+## RunBook is currently in BETA
+
+This is a very early prototype of the system. It is being released to the community in the hope that it will help people and attract contributors to the cause.
+
+## Getting Started
+The application will later be made available as SAAS at runbookapp.com. It will however always remain free and open source for the community.
+
+If you wish to be involved in the beta, you can download the application and get started using the following:
+
+git clone https://github.com/benjaminwootton/RunBook.git
+cd RunBook
+bundle
+rails s
+The above makes the perhaps unfair assumption that you have a sane Rails environment installed.
 
 ## Future Features
-
 - Printable books
 - Managing concurrent executions of books
 - Troubleshooting features
-- Escalation paths
+- Validations
 
-## Open Source
+## Who
+- RunBook is maintained by Benjamin Wootton. He can be found on Twitter @benjaminwootton and blogs at benjaminwootton.co.uk.
 
-The application is being shared as open sourced, but will potentially later be offered as SAAS at [runbookapp.com](runbookapp.com)
+
 
 
 
