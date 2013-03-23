@@ -4,6 +4,39 @@
 
   <%= form_for(@step, :html => { :class => "form label-inline" } ) do |f| %>
   
+
+  <h2><%= @step.book.title %></h2>
+  <h2><b>Step 2 of <%= @step.book.steps.size %> - <%= @step.title %></b></h2>
+  <hr>
+
+  <div id="description">
+  <p><i><%= simple_format(@step.description) %></i></p>
+  </div>
+
+ 
+  <% if @step.step_screenshot? %>
+  <%= image_tag @step.step_screenshot.url, :width => '300' %>
+  </br></br>
+  <% end %>
+
+  <% if @step.capture_output %>
+  <h3><b>Please Copy & Paste Captured Output Here:</b></h3>  
+  <div class="field">
+    <%= f.text_area :captured_output, :cols => 100, :rows => 5  %>
+  </div>
+  <% end %>
+
+  <div style="clear:both"/>
+  <% if !@step.step_validations.empty? %>
+  <h3><b>Please Acknowledge The Following Validation Checks Before Continuing:</b></h3>
+	<% @step.step_validations.each do |validation|  %>
+	<%= image_tag 'cross.png', :align => 'absmiddle' %> <%= validation.description %><br>
+	<% end %>
+  <% end %>
+</div></br>
+
+
+
   <!-- Navigation buttons -->
   <div style="clear:both"/>
   <% unless @step.previous.nil? %>
@@ -23,43 +56,6 @@
   <br/><br/>
   
   <!-- End navigation buttons -->
-
-  <h2><%= @step.book.title %></h2>
-  <h3><b><%= @step.title %></b></h3>
-  <hr>
-
-  <div id="description">
-  <p><i><%= simple_format(@step.description) %></i></p>
-  </br></br>
-  </div>
-
- 
-  <% if @step.step_screenshot? %>
-  <h3>Image</h3>
-  <hr>
-  <%= image_tag @step.step_screenshot.url %>
-  </br></br>
-  <% end %>
-
-  <% if @step.capture_output %>
-  <h3>Captured Output</h3>  
-  <hr>
-  <div class="field">
-    <%= f.text_area :captured_output, :cols => 100, :rows => 5  %>
-  </div>
-  <% end %>
-
-  <div style="clear:both"/>
-  <% if !@step.step_validations.empty? %>
-  <h2>Validation Steps</h2>
-  <hr>
-  <p>
-	<% @step.step_validations.each do |validation|  %>
-	<%= image_tag 'cross.png', :align => 'absmiddle' %> <%= validation.description %><br>
-	<% end %>
-  </p>
-  <% end %>
-</div>
 
 
 <% end %>
